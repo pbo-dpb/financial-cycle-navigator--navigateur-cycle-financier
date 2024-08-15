@@ -12,27 +12,29 @@
         :is-previous-year="!index"></Month>
     </Waterfall>
 
+  </div>
 
 
-    <template v-for="event in events">
-      <div class="flex flex-row gap-4 py-4">
-        <div class="flex flex-col gap-1 text-right w-full">
-          <div class="font-semibold text-slate-700 dark:text-white text-lg">{{ event.getName(language) }}</div>
-          <div>{{ event.getShortDescription(language) }}</div>
-        </div>
-        <div class="shrink-0 pt-2">
-          <CycleDot :color="event.color" class="size-4"></CycleDot>
-        </div>
+  <div class="grid grid-cols-3 gap-x-4 hover:bg-sky-50 transition-colors duration-100 group"
+    v-for="(ev, index) in events">
+    <div class="flex flex-row gap-4 py-4">
+      <div class="flex flex-col gap-1 text-right w-full">
+        <div class="font-semibold text-slate-700 dark:text-white text-lg">{{ ev.getName(language) }}</div>
+        <div>{{ ev.getShortDescription(language) }}</div>
       </div>
+      <div class="shrink-0 pt-2">
+        <CycleDot :color="ev.color" class="size-4">
+        </CycleDot>
+      </div>
+    </div>
 
-      <Waterfall class="last:rounded-b-lg shrink-0 ">
-        <WaterfallEventPeriod :event="event"></WaterfallEventPeriod>
-      </Waterfall>
-
-    </template>
-
+    <Waterfall class="shrink-0" :class="{ 'rounded-b-lg': index === events.length - 1 }">
+      <WaterfallEventPeriod :event="ev"></WaterfallEventPeriod>
+    </Waterfall>
 
   </div>
+
+
 
 
 
@@ -55,7 +57,7 @@ const DebugBar = defineAsyncComponent(() =>
 export default {
   computed: {
 
-    ...mapWritableState(Datasource, ['language']),
+    ...mapWritableState(Datasource, ['language', 'highlightEvent']),
     ...mapState(Datasource, ['strings', 'events']),
     debug() {
       return this.$root.debug;

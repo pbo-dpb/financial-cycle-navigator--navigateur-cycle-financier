@@ -43,7 +43,8 @@ const waterfallStyle = computed(() => {
         const rect = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
         rect.setAttribute('width', colWidth.value);
         rect.setAttribute('height', 1);
-        rect.setAttribute('fill', i % 2 === 0 ? '#f8fafc' : '#ffffff');
+        rect.setAttribute('fill', i % 2 === 0 ? '#E2EBF3' : '#ffffff');
+        rect.setAttribute('fill-opacity', 0.3);
         rect.setAttribute('x', colWidth.value * i);
         backgroundSvg.appendChild(rect);
     }

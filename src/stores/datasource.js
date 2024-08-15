@@ -11,6 +11,7 @@ export default defineStore('datasource', {
         iStrings: { en, fr },
         events: payload.events.map((event) => new CycleEvent(event)),
         currentDate: (new Date()).toISOString().split('T')[0],
+        highlightEvent: null,
     }),
 
     getters: {
