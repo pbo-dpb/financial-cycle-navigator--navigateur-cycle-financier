@@ -92,7 +92,7 @@ const waterfallStyle = computed(() => {
 
 </script>
 <template>
-    <div class="col-span-2 grid grid-cols-13 items-center" ref="waterfall" :style="waterfallStyle">
+    <div class="col-span-2 grid grid-cols-13" ref="waterfall" :style="waterfallStyle">
         <slot></slot>
     </div>
 </template>

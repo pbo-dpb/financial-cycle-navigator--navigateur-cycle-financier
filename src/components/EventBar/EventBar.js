@@ -1,8 +1,8 @@
-export { props, getBaseGridClasses }
+export { commonProps, getBaseGridClasses, getLeftPadding }
 import CycleEvent from '../../models/CycleEvent';
 
 
-const props = {
+const commonProps = {
     event: {
         type: CycleEvent,
     }
@@ -10,6 +10,12 @@ const props = {
 
 const getBaseGridClasses = () => {
     return [
-        "bg-red-600"
+        "pt-6"
     ]
+}
+
+const getLeftPadding = (startDate, colWidth) => {
+    const daysInMonth = new Date(startDate.getFullYear(), startDate.getMonth() + 1, 0).getDate();
+    const percentageOfStartDateInMonth = startDate.getDate() / daysInMonth;
+    return colWidth * percentageOfStartDateInMonth;
 }

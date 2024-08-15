@@ -1,6 +1,6 @@
 <script setup>
-import { props } from "./EventBar"
-defineProps(props);
+import { commonProps } from "./EventBar"
+defineProps(commonProps);
 
 </script>
 <template>

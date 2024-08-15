@@ -20,12 +20,12 @@
           <div class="font-semibold text-slate-700 dark:text-white text-lg">{{ event.getName(language) }}</div>
           <div>{{ event.getShortDescription(language) }}</div>
         </div>
-        <div class="size-4 pt-2">
-          <CycleDot :color="event.color"></CycleDot>
+        <div class="shrink-0 pt-2">
+          <CycleDot :color="event.color" class="size-4"></CycleDot>
         </div>
       </div>
 
-      <Waterfall class="last:rounded-b-lg">
+      <Waterfall class="last:rounded-b-lg shrink-0 ">
         <SingleEvent v-if="event.isSingle" :event="event"></SingleEvent>
         <LapsingEvent v-else :event="event"></LapsingEvent>
       </Waterfall>
