@@ -26,8 +26,7 @@
       </div>
 
       <Waterfall class="last:rounded-b-lg shrink-0 ">
-        <SingleEvent v-if="event.isSingle" :event="event"></SingleEvent>
-        <LapsingEvent v-else :event="event"></LapsingEvent>
+        <WaterfallEventPeriod :event="event"></WaterfallEventPeriod>
       </Waterfall>
 
     </template>
@@ -46,9 +45,8 @@ import { mapState, mapWritableState } from 'pinia'
 import Localizations from './stores/localizations.js'
 import Month from './components/Month.vue'
 import Waterfall from './components/Waterfall.vue'
-import LapsingEvent from './components/EventBar/LapsingEventBar.vue'
 import CycleDot from './components/CycleDot.vue'
-import SingleEvent from './components/EventBar/SingleEventBar.vue'
+import WaterfallEventPeriod from './components/WaterfallEvent/WaterfallEventPeriod.vue'
 
 const DebugBar = defineAsyncComponent(() =>
   import("./components/DebugBar.vue")
@@ -81,10 +79,9 @@ export default {
   components: {
     DebugBar,
     Month,
-    SingleEvent,
-    LapsingEvent,
     Waterfall,
-    CycleDot
+    CycleDot,
+    WaterfallEventPeriod
   }
 };
 </script>
