@@ -4,6 +4,7 @@
             "name_en": "Main Estimates",
             "name_fr": "Budget principal des dépenses",
             "part_of_estimates_process": true,
+            "color": "#0369a1",
             "short_description_en": "Tabled prior to start of the fiscal year, on or before March 1.",
             "short_description_fr": "Déposé avant le début de l'exercice financier, au plus tard le 1er mars.",
             "long_description_en": "The Main Estimates are the first Estimates for a given fiscal year and include the majority of the Government’s planned spending for the upcoming fiscal year.",
@@ -14,7 +15,7 @@
         {
             "name_en": "Departmental Plans",
             "name_fr": "Plans ministériels",
-            "color": "#f97316",
+            "color": "#c026d3",
             "part_of_estimates_process": true,
             "short_description_en": "Tabled alongside Main Estimates or shortly after.",
             "short_description_fr": "Déposé en même temps que le budget principal des dépenses ou peu de temps après.",
@@ -29,8 +30,78 @@
             "short_description_fr": "Déposé au printemps, généralement en mars ou en avril.",
             "long_description_en": "The Budget presents the Government’s spending priorities and expected revenues for a given fiscal year. It also includes economic and fiscal projections.",
             "long_description_fr": "Le budget présente les priorités de dépenses du gouvernement et les recettes prévues pour un exercice financier donné. Il comprend également des projections économiques et financières.",
-            "start": "04-01",
-            "end": "04-30"
+            "start": "03-01",
+            "end": "04-30",
+            "color": "#16a34a"
+        },
+        {
+            "name_en": "Supplementary Estimates (A)",
+            "name_fr": "Budgets supplémentaires des dépenses (A)",
+            "part_of_estimates_process": true,
+            "color": "#3A85CF",
+            "short_description_en": "Tabled in the spring, typically May. Supply period ends June 23.",
+            "short_description_fr": "Déposé au printemps, généralement en mai. La période d'octroi des crédits se termine le 23 juin.",
+            "long_description_en": "The Supplementary Estimates reflect additional funding requests for items that were not fully developed or anticipated in earlier Estimates in a given fiscal year.",
+            "long_description_fr": "Les budgets supplémentaires des dépenses reflètent les demandes de financement supplémentaires pour des éléments qui n'ont pas été pleinement développés ou anticipés dans les budgets des dépenses antérieurs d'un exercice financier donné.",
+            "start": "05-01",
+            "end": "05-31"
+        },
+        {
+            "name_en": "Fall Economic Statement",
+            "name_fr": "Énoncé économique de l'automne",
+            "color": "#f59e0b",
+            "short_description_en": "Tabled in the fall, typically November.",
+            "short_description_fr": "Déposé à l'automne, généralement en novembre.",
+            "long_description_en": "The Fall Economic Statement, which succeeds the Budget, provides an update to the Government’s spending plans for a given fiscal year. It also includes updated economic and fiscal projections.",
+            "long_description_fr": "L'énoncé économique de l'automne, qui succède au budget, fournit une mise à jour des plans de dépenses du gouvernement pour un exercice financier donné. Il comprend également des projections économiques et financières mises à jour.",
+            "start": "10-01",
+            "end": "12-31"
+        },
+        {
+            "name_en": "Supplementary Estimates (B)",
+            "name_fr": "Budgets supplémentaires des dépenses (B)",
+            "part_of_estimates_process": true,
+            "color": "#2C70B5",
+            "short_description_en": "Tabled late fall, typically November. Supply period ends December 10.",
+            "short_description_fr": "Déposé à la fin de l'automne, généralement en novembre. La période d'octroi des crédits se termine le 10 décembre.",
+            "long_description_en": "The Supplementary Estimates reflect additional funding requests for items that were not fully developed or anticipated in earlier Estimates in a given fiscal year.",
+            "long_description_fr": "Les budgets supplémentaires des dépenses reflètent les demandes de financement supplémentaires pour des éléments qui n'ont pas été pleinement développés ou anticipés dans les budgets des dépenses antérieurs d'un exercice financier donné.",
+            "start": "11-01",
+            "end": "11-30"
+        },
+        {
+            "name_en": "Departmental Results Reports",
+            "name_fr": "Rapport sur les résultats ministériels",
+            "part_of_estimates_process": true,
+            "color": "#dc2626",
+            "short_description_en": "Tabled in the fall.",
+            "short_description_fr": "Déposé à l'automne.",
+            "long_description_en": "The Departmental Results Reports provide actual results achieved against priorities listed in Departmental Plans for the most recently completed fiscal year.",
+            "long_description_fr": "Les rapports sur les résultats ministériels fournissent les résultats réels obtenus par rapport aux priorités énumérées dans les plans ministériels pour l'exercice financier le plus récemment terminé.",
+            "start": "10-01",
+            "end": "12-31"
+        },
+        {
+            "name_en": "Public Accounts",
+            "name_fr": "Comptes publics",
+            "short_description_en": "Tabled by December 31, typically October.",
+            "short_description_fr": "Déposé au plus tard le 31 décembre, généralement en octobre.",
+            "long_description_en": "The Public Accounts include audited consolidated financial statements of the Government of Canada for the previous fiscal year. It also includes supplementary financial information from departments and other reporting entities. ",
+            "long_description_fr": "Les comptes publics comprennent les états financiers consolidés audités du gouvernement du Canada pour l'exercice financier précédent. Ils comprennent également des informations financières supplémentaires provenant des ministères et d'autres entités de déclaration.",
+            "start": "10-01",
+            "end": "12-31"
+        },
+        {
+            "name_en": "Supplementary Estimates (C)",
+            "name_fr": "Budgets supplémentaires des dépenses (C)",
+            "color": "#245C94",
+            "part_of_estimates_process": true,
+            "short_description_en": "Tabled in the winter, typically February. Supply period ends March 26.",
+            "short_description_fr": "Déposé en hiver, généralement en février. La période d'octroi des crédits se termine le 26 mars.",
+            "long_description_en": "The Supplementary Estimates reflect additional funding requests for items that were not fully developed or anticipated in earlier Estimates in a given fiscal year.",
+            "long_description_fr": "Les budgets supplémentaires des dépenses reflètent les demandes de financement supplémentaires pour des éléments qui n'ont pas été pleinement développés ou anticipés dans les budgets des dépenses antérieurs d'un exercice financier donné.",
+            "start": "02-01",
+            "end": "02-28"
         }
     ]
 }
