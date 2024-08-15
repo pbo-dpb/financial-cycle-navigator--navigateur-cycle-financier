@@ -63,14 +63,14 @@ const waterfallStyle = computed(() => {
     const endOfElapsedContent = waterfallWidth.value * elapsedRatio;
     const elapsedFillAnimation = document.createElementNS('http://www.w3.org/2000/svg', 'animate');
     elapsedFillAnimation.setAttribute('attributeName', 'width');
-    elapsedFillAnimation.setAttribute('values', `0;${endOfElapsedContent * 0.8};${endOfElapsedContent}`);
+    elapsedFillAnimation.setAttribute('values', `0;${endOfElapsedContent * 0.6};${endOfElapsedContent}`);
     elapsedFillAnimation.setAttribute('dur', '0.55s');
     elapsedFillAnimation.setAttribute('repeatCount', '1');
     elapsedFill.appendChild(elapsedFillAnimation);
 
     backgroundSvg.appendChild(elapsedFill);
     const elapsedStroke = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
-    elapsedStroke.setAttribute('width', .2);
+    elapsedStroke.setAttribute('width', 2);
     elapsedStroke.setAttribute('height', 1);
     elapsedStroke.setAttribute('fill', '#2dd4bf');
     elapsedStroke.setAttribute('fill-opacity', 0.3);
