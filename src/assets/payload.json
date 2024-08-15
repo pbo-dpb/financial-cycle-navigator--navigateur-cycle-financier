@@ -1,5 +1,36 @@
-[
-    1,
-    2,
-    3
-]
+{
+    "events": [
+        {
+            "name_en": "Main Estimates",
+            "name_fr": "Budget principal des dépenses",
+            "part_of_estimates_process": true,
+            "short_description_en": "Tabled prior to start of the fiscal year, on or before March 1.",
+            "short_description_fr": "Déposé avant le début de l'exercice financier, au plus tard le 1er mars.",
+            "long_description_en": "The Main Estimates are the first Estimates for a given fiscal year and include the majority of the Government’s planned spending for the upcoming fiscal year.",
+            "long_description_fr": "Le budget principal des dépenses est le premier budget des dépenses d'un exercice financier donné et comprend la majeure partie des dépenses prévues du gouvernement pour l'exercice financier à venir.",
+            "start": "03-01",
+            "fincy_tag": "mains"
+        },
+        {
+            "name_en": "Departmental Plans",
+            "name_fr": "Plans ministériels",
+            "color": "#f97316",
+            "part_of_estimates_process": true,
+            "short_description_en": "Tabled alongside Main Estimates or shortly after.",
+            "short_description_fr": "Déposé en même temps que le budget principal des dépenses ou peu de temps après.",
+            "long_description_en": "Departmental Plans provide forward-looking information on departmental priorities, results and resources required over a three-year period. They provide additional context to the spending information included in the Main Estimates.",
+            "long_description_fr": "Les plans ministériels fournissent des renseignements prospectifs sur les priorités ministérielles, les résultats et les ressources nécessaires sur une période de trois ans. Ils fournissent un contexte supplémentaire aux renseignements sur les dépenses inclus dans le budget principal des dépenses.",
+            "start": "03-03"
+        },
+        {
+            "name_en": "The Budget",
+            "name_fr": "Le budget",
+            "short_description_en": "Tabled in the spring, typically March or April.",
+            "short_description_fr": "Déposé au printemps, généralement en mars ou en avril.",
+            "long_description_en": "The Budget presents the Government’s spending priorities and expected revenues for a given fiscal year. It also includes economic and fiscal projections.",
+            "long_description_fr": "Le budget présente les priorités de dépenses du gouvernement et les recettes prévues pour un exercice financier donné. Il comprend également des projections économiques et financières.",
+            "start": "03-01",
+            "end": "04-30"
+        }
+    ]
+}

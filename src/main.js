@@ -7,7 +7,7 @@ import App from "./App.ce.vue"
 
 const plugins = [];
 
-customElements.define('pbotool-boilerplate', defineCustomElement({
+customElements.define('pbotool-financialcyclenavigator', defineCustomElement({
     render: () => h(App),
     styles: [stl],
     props: {

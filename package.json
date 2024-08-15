@@ -1,13 +1,14 @@
 {
-  "name": "pbotool-ce-sample",
+  "name": "pbotool-ce-fcn--ncf",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.0.1",
   "scripts": {
     "dev": "vite --host --port 8080",
     "build": "vite build",
     "preview": "vite preview"
   },
   "dependencies": {
+    "@heroicons/vue": "^2.1.5",
     "pinia": "^2.1.7",
     "vue": "^3.4.30"
   },
