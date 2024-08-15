@@ -5,7 +5,7 @@ import fr from '../assets/strings/fr.json'
 import payload from '../assets/payload.json'
 import CycleEvent from '../models/CycleEvent'
 
-export default defineStore('localizations', {
+export default defineStore('datasource', {
     state: () => ({
         language: document.documentElement.lang,
         iStrings: { en, fr },

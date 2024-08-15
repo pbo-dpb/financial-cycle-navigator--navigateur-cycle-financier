@@ -42,7 +42,7 @@
 import { defineAsyncComponent } from 'vue'
 import WrapperEventDispatcher from "./WrapperEventDispatcher.js"
 import { mapState, mapWritableState } from 'pinia'
-import Localizations from './stores/localizations.js'
+import Datasource from './stores/datasource.js'
 import Month from './components/Month.vue'
 import Waterfall from './components/Waterfall.vue'
 import CycleDot from './components/CycleDot.vue'
@@ -55,8 +55,8 @@ const DebugBar = defineAsyncComponent(() =>
 export default {
   computed: {
 
-    ...mapWritableState(Localizations, ['language']),
-    ...mapState(Localizations, ['strings', 'events']),
+    ...mapWritableState(Datasource, ['language']),
+    ...mapState(Datasource, ['strings', 'events']),
     debug() {
       return this.$root.debug;
     },
