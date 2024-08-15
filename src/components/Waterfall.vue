@@ -1,7 +1,11 @@
 <script setup>
+import Datasource from '../stores/datasource.js'
+
+const store = Datasource()
+const currentDateString = computed(() => store.currentDate)
+
 
 import { ref, onMounted, onBeforeUnmount, computed, provide } from 'vue'
-
 const waterfall = ref(null);
 const waterfallWidth = ref(0);
 const columnCount = ref(13);
@@ -44,7 +48,7 @@ const waterfallStyle = computed(() => {
         backgroundSvg.appendChild(rect);
     }
 
-    const currentDate = new Date();
+    const currentDate = new Date(currentDateString.value);
     const year = currentDate.getFullYear();
     const daysSinceBeginningOfYear = Math.floor((Date.parse(`${year}-${currentDate.getMonth() + 1}-${currentDate.getDate()}`) - Date.parse(`${year}-03-01`)) / 86400000);
     const isLeapYear = ((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0);

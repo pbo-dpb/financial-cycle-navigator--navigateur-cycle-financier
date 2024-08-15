@@ -10,7 +10,7 @@ export default defineStore('datasource', {
         language: document.documentElement.lang,
         iStrings: { en, fr },
         events: payload.events.map((event) => new CycleEvent(event)),
-
+        currentDate: (new Date()).toISOString().split('T')[0],
     }),
 
     getters: {
