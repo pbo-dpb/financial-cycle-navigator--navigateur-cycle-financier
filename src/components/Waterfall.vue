@@ -51,7 +51,9 @@ const waterfallStyle = computed(() => {
 
     const currentDate = new Date(currentDateString.value);
     const year = currentDate.getFullYear();
-    const daysSinceBeginningOfYear = Math.floor((Date.parse(`${year}-${currentDate.getMonth() + 1}-${currentDate.getDate()}`) - Date.parse(`${year}-03-01`)) / 86400000);
+
+    const daysSinceBeginningOfYear = Math.floor((new Date(year, currentDate.getMonth(), currentDate.getDate()).getTime()  - new Date(currentDate.getMonth() > 2 ? year : (year-1), 2, 1).getTime()) / 86400000);
+
     const isLeapYear = ((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0);
 
     // Draw the current date
