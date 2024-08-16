@@ -19,9 +19,10 @@ const strings = computed(() => store.strings)
 
 </script>
 <template>
-    <div class="flex flex-row justify-center text-slate-700 first:text-slate-500 py-2 ">
+    <div
+        class="flex flex-row justify-center text-slate-700 first:text-slate-500 dark:first:text-slate-400 py-2 dark:text-white">
         <span class="text-center font-semibold uppercase backdrop-blur-sm rounded-sm w-fit tracking-tight">{{
             strings[`month_${String(month).padStart(2, "0")}`]
-        }}</span>
+            }}</span>
     </div>
 </template>

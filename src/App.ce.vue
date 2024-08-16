@@ -15,7 +15,7 @@
   </div>
 
 
-  <div class="grid grid-cols-3 gap-x-4 hover:bg-sky-50 transition-colors duration-100 group"
+  <div class="grid grid-cols-3 gap-x-4 hover:bg-sky-50 dark:hover:bg-sky-900 transition-colors duration-100 group"
     v-for="(ev, index) in events">
     <div class="flex flex-row gap-4 py-4">
       <div class="flex flex-col gap-1 text-right w-full">
