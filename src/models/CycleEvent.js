@@ -4,8 +4,11 @@ export default class CycleEvent {
 
 
         this.part_of_estimates_process = obj.part_of_estimates_process || false;
-        this.start = new Date(obj.start);
-        this.end = obj.end ? new Date(obj.end) : null;
+
+        this.start = new Date((new Date()).getFullYear(), parseInt(obj.start.split("-")[0]) - 1, parseInt(obj.start.split("-")[1]));
+
+        this.end = obj.end ? new Date((new Date()).getFullYear(), parseInt(obj.end.split("-")[0]) - 1, parseInt(obj.end.split("-")[1])) : null;
+
         this.fincy_tag = obj.fincy_tag || null;
 
         if (!this.color && this.part_of_estimates_process) {
