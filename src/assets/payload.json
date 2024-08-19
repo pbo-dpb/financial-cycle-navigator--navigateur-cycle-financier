@@ -73,6 +73,7 @@
             "name_en": "Departmental Results Reports",
             "name_fr": "Rapport sur les résultats ministériels",
             "part_of_estimates_process": true,
+            "previous_spending": true,
             "color": "#dc2626",
             "short_description_en": "Tabled in the fall.",
             "short_description_fr": "Déposé à l'automne.",
@@ -84,6 +85,7 @@
         {
             "name_en": "Public Accounts",
             "name_fr": "Comptes publics",
+            "previous_spending": true,
             "short_description_en": "Tabled by December 31, typically October.",
             "short_description_fr": "Déposé au plus tard le 31 décembre, généralement en octobre.",
             "long_description_en": "The Public Accounts include audited consolidated financial statements of the Government of Canada for the previous fiscal year. It also includes supplementary financial information from departments and other reporting entities. ",
