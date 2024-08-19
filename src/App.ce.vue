@@ -1,7 +1,7 @@
 <template>
   <DebugBar v-if="debug"></DebugBar>
 
-  <div class="grid grid-cols-3 gap-x-4">
+  <div class="hidden lg:grid grid-cols-3 gap-x-4 border-l-4 border-transparent pl-2 -ml-2">
 
     <div class="flex flex-col gap-4">
 
@@ -16,10 +16,6 @@
 
   <WaterfallEvent v-for="(ev, index) in events" :key="ev.id" :event="ev" :is-last="index === events.length - 1">
   </WaterfallEvent>
-
-
-
-
 
 </template>
 
