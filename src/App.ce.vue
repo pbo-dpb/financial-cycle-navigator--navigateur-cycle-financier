@@ -3,6 +3,10 @@
 
   <div class="hidden lg:grid grid-cols-3 gap-x-4 border-l-4 border-transparent pl-2 -ml-2">
 
+    <div class="col-span-3 mb-4">
+      <CollapsibleIntro></CollapsibleIntro>
+    </div>
+
     <div class="flex flex-col gap-4">
 
     </div>
@@ -27,6 +31,7 @@ import Datasource from './stores/datasource.js'
 import Month from './components/Month.vue'
 import Waterfall from './components/Waterfall.vue'
 import WaterfallEvent from './components/WaterfallEvent/WaterfallEvent.vue'
+import CollapsibleIntro from './components/CollapsibleIntro.vue'
 
 const DebugBar = defineAsyncComponent(() =>
   import("./components/DebugBar.vue")
@@ -62,7 +67,8 @@ export default {
     DebugBar,
     Month,
     Waterfall,
-    WaterfallEvent
+    WaterfallEvent,
+    CollapsibleIntro
   }
 };
 </script>

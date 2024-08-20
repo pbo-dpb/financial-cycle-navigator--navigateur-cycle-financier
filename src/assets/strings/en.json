@@ -19,5 +19,6 @@
     "upcoming_report_short_label": "Upcoming PBO analysis",
     "fincyable_label_blog": "PBO Additional Analysis",
     "fincyable_label_RP": "PBO Report",
-    "fincyable_label_LEG": "PBO Note"
+    "fincyable_label_LEG": "PBO Note",
+    "collapsible_component_handle": "About"
 }
