@@ -44,7 +44,8 @@
             "long_description_en": "The Supplementary Estimates reflect additional funding requests for items that were not fully developed or anticipated in earlier Estimates in a given fiscal year.",
             "long_description_fr": "Les budgets supplémentaires des dépenses reflètent les demandes de financement supplémentaires pour des éléments qui n'ont pas été pleinement développés ou anticipés dans les budgets des dépenses antérieurs d'un exercice financier donné.",
             "start": "05-01",
-            "end": "05-31"
+            "end": "05-31",
+            "fincy_tag": "supps_a"
         },
         {
             "name_en": "Fall Economic Statement",
@@ -67,7 +68,8 @@
             "long_description_en": "The Supplementary Estimates reflect additional funding requests for items that were not fully developed or anticipated in earlier Estimates in a given fiscal year.",
             "long_description_fr": "Les budgets supplémentaires des dépenses reflètent les demandes de financement supplémentaires pour des éléments qui n'ont pas été pleinement développés ou anticipés dans les budgets des dépenses antérieurs d'un exercice financier donné.",
             "start": "11-01",
-            "end": "11-30"
+            "end": "11-30",
+            "fincy_tag": "supps_b"
         },
         {
             "name_en": "Departmental Results Reports",
@@ -103,7 +105,8 @@
             "long_description_en": "The Supplementary Estimates reflect additional funding requests for items that were not fully developed or anticipated in earlier Estimates in a given fiscal year.",
             "long_description_fr": "Les budgets supplémentaires des dépenses reflètent les demandes de financement supplémentaires pour des éléments qui n'ont pas été pleinement développés ou anticipés dans les budgets des dépenses antérieurs d'un exercice financier donné.",
             "start": "02-01",
-            "end": "02-28"
+            "end": "02-28",
+            "fincy_tag": "supps_c"
         }
     ]
 }

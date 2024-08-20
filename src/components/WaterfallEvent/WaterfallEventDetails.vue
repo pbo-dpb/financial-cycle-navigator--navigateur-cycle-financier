@@ -26,22 +26,24 @@ const description = computed(() => {
 <template>
 
 
-    <div class="lg:grid grid-cols-3 gap-x-4">
+    <div class="lg:grid grid-cols-5 gap-4">
 
-        <div class="p-4 rounded bg-teal-800 text-white m-4 flex flex-col gap-2">
+        <div class="col-span-3 p-4 rounded bg-teal-800 text-white m-4 flex flex-col gap-2" :class="{
+            'col-start-2 ': !event.fincy_tag
+        }">
+
 
             <ul v-if="event.part_of_estimates_process || event.previous_spending"
-                class="flex flex-col gap-2 justify-end">
+                class="flex flex-row items-center gap-2">
                 <li v-if="event.part_of_estimates_process"
-                    class="flex flex-row items-center gap-1 bg-teal-900 rounded-lg  text-sm px-2 w-fit self-end">
+                    class="flex flex-row items-center gap-1 bg-teal-900 rounded-lg  text-sm px-2 w-fit text-center leading-tight">
                     <CalculatorIcon class="size-4" aria-hidden="true"></CalculatorIcon> <span class="font-semibold">{{
                         strings.part_of_the_estimate_process_label }}</span>
                 </li>
                 <li v-if="event.previous_spending"
-                    class="flex flex-row items-center gap-1 bg-teal-900 rounded-lg  text-sm px-2 w-fit self-end">
+                    class="flex flex-row items-center gap-1 bg-teal-900 rounded-lg  text-sm px-2 w-fit text-center leading-tight">
                     <ArrowUturnLeftIcon class="size-4" aria-hidden="true"></ArrowUturnLeftIcon> <span
-                        class="font-semibold">{{
-                            strings.previous_spending_label }}</span>
+                        class="font-semibold">{{ strings.previous_spending_label }}</span>
                 </li>
 
             </ul>
@@ -51,9 +53,6 @@ const description = computed(() => {
             </div>
         </div>
 
-        <div class="col-span-2">
-
-        </div>
 
     </div>
 
