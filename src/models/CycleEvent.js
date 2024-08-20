@@ -11,7 +11,7 @@ export default class CycleEvent {
 
         this.end = obj.end ? new Date((new Date()).getFullYear(), parseInt(obj.end.split("-")[0]) - 1, parseInt(obj.end.split("-")[1])) : null;
 
-        this.fincy_tag = obj.fincy_tag || null;
+        this.fincy_document_type = obj.fincy_document_type || null;
 
         if (!this.color && this.part_of_estimates_process) {
             this.color = "#14b8a6";

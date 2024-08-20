@@ -22,7 +22,7 @@
 <script>
 import { defineAsyncComponent } from 'vue'
 import WrapperEventDispatcher from "./WrapperEventDispatcher.js"
-import { mapState, mapWritableState } from 'pinia'
+import { mapState, mapWritableState, mapActions } from 'pinia'
 import Datasource from './stores/datasource.js'
 import Month from './components/Month.vue'
 import Waterfall from './components/Waterfall.vue'
@@ -45,8 +45,10 @@ export default {
 
   mounted() {
     this.setPageTitle();
+    this.fetchFincies();
   },
   methods: {
+    ...mapActions(Datasource, ['fetchFincies']),
     setPageTitle() {
       (new WrapperEventDispatcher(this.strings.title, null)).dispatch();
     }

@@ -9,6 +9,7 @@ const language = computed(() => store.language)
 const strings = computed(() => store.strings)
 
 import { CalculatorIcon, ArrowUturnLeftIcon } from '@heroicons/vue/16/solid';
+import WaterfallEventDetailsFincy from './WaterfallEventDetailsFincy.vue';
 
 const props = defineProps({
     event: {
@@ -26,10 +27,10 @@ const description = computed(() => {
 <template>
 
 
-    <div class="lg:grid grid-cols-5 gap-4">
+    <div class="lg:grid grid-cols-5 gap-4 items-center p-4">
 
-        <div class="col-span-3 p-4 rounded bg-teal-800 text-white m-4 flex flex-col gap-2" :class="{
-            'col-start-2 ': !event.fincy_tag
+        <div class="col-span-3 p-4 rounded bg-teal-800 text-white  flex flex-col gap-2" :class="{
+            'col-start-2 ': !event.fincy_document_type
         }">
 
 
@@ -48,10 +49,14 @@ const description = computed(() => {
 
             </ul>
 
-            <div class="leading-snug  max-w-none" v-html="description">
-
-            </div>
+            <div class="leading-snug  max-w-none" v-html="description"></div>
         </div>
+
+
+
+        <WaterfallEventDetailsFincy class="col-span-2" :event="event" v-if="event.fincy_document_type">
+        </WaterfallEventDetailsFincy>
+
 
 
     </div>

@@ -1,5 +1,6 @@
 {
     "title": "Financial Cycle Navigator",
+    "loading": "Loading...",
     "month_01": "Jan",
     "month_02": "Feb",
     "month_03": "Mar",
@@ -13,5 +14,10 @@
     "month_11": "Nov",
     "month_12": "Dec",
     "part_of_the_estimate_process_label": "Part of the Estimates process",
-    "previous_spending_label": "Previous spending"
+    "previous_spending_label": "Previous spending",
+    "upcoming_report_long_label": "Part of the PBO's core publications. The PBO will release an analysis.",
+    "upcoming_report_short_label": "Upcoming PBO analysis",
+    "fincyable_label_blog": "PBO Additional Analysis",
+    "fincyable_label_RP": "PBO Report",
+    "fincyable_label_LEG": "PBO Note"
 }
