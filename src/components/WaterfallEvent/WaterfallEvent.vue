@@ -34,8 +34,7 @@ const open = ref(false);
             @click="open = !open">
             <div class="flex flex-row gap-4 py-4">
                 <div class="flex flex-col gap-1 text-right w-full">
-                    <div class="font-semibold text-slate-700 dark:text-white text-lg decoration-teal-500 decoration-2 underline-offset-2"
-                        :class="{ 'underline': event.part_of_estimates_process }">
+                    <div class="font-semibold text-slate-700 dark:text-white text-lg ">
 
                         {{ event.getName(language) }}
                     </div>

@@ -13,7 +13,7 @@
 
     <Waterfall :draw-background="false">
 
-      <CurrentFiscalYearIndicaor></CurrentFiscalYearIndicaor>
+      <CurrentFiscalYearIndicator></CurrentFiscalYearIndicator>
 
     </Waterfall>
 
@@ -28,7 +28,15 @@
 
   </div>
 
-  <WaterfallEvent v-for="(ev, index) in events" :key="ev.id" :event="ev" :is-last="index === events.length - 1">
+  <WaterfallEvent v-for="(ev, index) in eventGroups.planned_spending" :key="ev.id" :event="ev"
+    :is-last="index === events.length - 1">
+
+  </WaterfallEvent>
+
+
+  <WaterfallEventGroupLabel>{{ strings.previous_spending_label }}</WaterfallEventGroupLabel>
+  <WaterfallEvent v-for="(ev, index) in eventGroups.previous_spending" :key="ev.id" :event="ev"
+    :is-last="index === events.length - 1">
   </WaterfallEvent>
 
 </template>
@@ -42,7 +50,8 @@ import Month from './components/Month.vue'
 import Waterfall from './components/Waterfall.vue'
 import WaterfallEvent from './components/WaterfallEvent/WaterfallEvent.vue'
 import CollapsibleIntro from './components/CollapsibleIntro.vue'
-import CurrentFiscalYearIndicaor from './components/CurrentFiscalYearIndicaor.vue'
+import CurrentFiscalYearIndicator from './components/CurrentFiscalYearIndicator.vue'
+import WaterfallEventGroupLabel from './components/WaterfallEventGroupLabel.vue'
 
 const DebugBar = defineAsyncComponent(() =>
   import("./components/DebugBar.vue")
@@ -56,6 +65,14 @@ export default {
     debug() {
       return this.$root.debug;
     },
+
+    eventGroups() {
+      return {
+        previous_spending: this.events.filter(ev => ev.previous_spending),
+        planned_spending: this.events.filter(ev => !ev.previous_spending),
+      }
+    }
+
   },
 
 
@@ -80,7 +97,8 @@ export default {
     Waterfall,
     WaterfallEvent,
     CollapsibleIntro,
-    CurrentFiscalYearIndicaor
+    CurrentFiscalYearIndicator,
+    WaterfallEventGroupLabel
   }
 };
 </script>
