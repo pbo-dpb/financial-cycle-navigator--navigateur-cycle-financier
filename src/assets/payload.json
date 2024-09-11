@@ -32,7 +32,8 @@
             "long_description_fr": "Le budget présente les priorités de dépenses du gouvernement et les recettes prévues pour un exercice financier donné. Il comprend également des projections économiques et financières.",
             "start": "03-01",
             "end": "04-30",
-            "color": "#16a34a"
+            "color": "#16a34a",
+            "fincy_document_type": "budget_key_issues"
         },
         {
             "name_en": "Supplementary Estimates (A)",
@@ -56,7 +57,8 @@
             "long_description_en": "The Fall Economic Statement, which succeeds the Budget, provides an update to the Government’s spending plans for a given fiscal year. It also includes updated economic and fiscal projections.",
             "long_description_fr": "L'énoncé économique de l'automne, qui succède au budget, fournit une mise à jour des plans de dépenses du gouvernement pour un exercice financier donné. Il comprend également des projections économiques et financières mises à jour.",
             "start": "10-01",
-            "end": "12-31"
+            "end": "12-31",
+            "fincy_document_type": "fall_economic_statement"
         },
         {
             "name_en": "Supplementary Estimates (B)",
