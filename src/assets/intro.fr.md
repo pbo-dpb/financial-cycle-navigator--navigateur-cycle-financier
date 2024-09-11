@@ -1,11 +1,11 @@
-**Ce texte a été traduit de façon machine**. Un des rôles centraux du Parlement est d’autoriser et de surveiller les dépenses du gouvernement. Pour dépenser de l’argent, le gouvernement doit obtenir l’approbation du Parlement. Cela se fait de deux façons : soit par une législation en cours, soit sur une base annuelle par des projets de loi de crédits. Les Budgets des dépenses fournissent des détails sur les autorisations de dépenses demandées dans ces projets de loi.
+L'un des rôles centraux du Parlement est d'autoriser et de superviser les dépenses et la fiscalité du gouvernement. Le cycle financier parlementaire est un processus continu au cours duquel le Parlement examine les plans de fiscalité et de dépenses du gouvernement et passe en revue les dépenses réelles et les résultats financiers.
 
-Dans le cadre de son mandat, le directeur parlementaire du budget (DPB) fournit une analyse des Budgets des dépenses du gouvernement. En fournissant une analyse non partisane des Budgets principaux et supplémentaires des dépenses, le DPB veille à ce que le Parlement ait une compréhension claire et précise des plans financiers du gouvernement et des implications des dépenses proposées.
+Le DPB soutient le débat parlementaire tout au long du cycle financier en :
 
-Le DPB soutient le débat parlementaire sur les Budgets des dépenses en :
+Publiant des rapports réguliers sur les documents du budget et des prévisions;
+Fournissant des estimations indépendantes des coûts des mesures budgétaires;
+Informant les membres du Parlement sur les documents de prévisions et le processus;
+Offrant des témoignages en tant que témoin dans les comités.
+Le Navigateur du cycle financier parlementaire aide les utilisateurs à visualiser leur position actuelle au sein du cycle financier. Il permet aux utilisateurs de voir ce qui a été publié et offre un accès facile aux documents clés. De plus, l'outil met en évidence les rapports existants et à venir du DPB qui soutiennent les parlementaires dans l'analyse des plans de dépenses du gouvernement pour l'année fiscale en cours.
 
-- Publiant régulièrement des rapports sur les documents des Budgets des dépenses;
-- Briefant les députés sur les documents et le processus des Budgets des dépenses; et
-- Fournissant des témoignages devant les comités.
-
-Pour toute question sur les Budgets des dépenses ou pour demander une séance d’information, veuillez [nous contacter](https://www.pbo-dpb.ca/fr/contact--contact).
+Pour toute question sur le cycle financier parlementaire, ou pour demander un briefing, veuillez [nous contacter](https://www.pbo-dpb.ca/fr/contact--contact).

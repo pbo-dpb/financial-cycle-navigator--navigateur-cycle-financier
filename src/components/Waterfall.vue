@@ -1,6 +1,13 @@
 <script setup>
 import Datasource from '../stores/datasource.js'
 
+const props = defineProps({
+    drawBackground: {
+        type: Boolean,
+        default: true
+    }
+})
+
 const store = Datasource()
 const currentDateString = computed(() => store.currentDate)
 
@@ -33,7 +40,7 @@ onBeforeUnmount(() => {
 })
 
 const waterfallStyle = computed(() => {
-    if (!waterfallWidth.value) return "";
+    if (!props.drawBackground || !waterfallWidth.value) return "";
     const backgroundSvg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
     backgroundSvg.setAttribute('xmlns', 'http://www.w3.org/2000/svg');
     backgroundSvg.setAttribute('viewBox', `0 0 ${waterfallWidth.value} 1`);
@@ -52,7 +59,7 @@ const waterfallStyle = computed(() => {
     const currentDate = new Date(currentDateString.value);
     const year = currentDate.getFullYear();
 
-    const daysSinceBeginningOfYear = Math.floor((new Date(year, currentDate.getMonth(), currentDate.getDate()).getTime()  - new Date(currentDate.getMonth() > 2 ? year : (year-1), 2, 1).getTime()) / 86400000);
+    const daysSinceBeginningOfYear = Math.floor((new Date(year, currentDate.getMonth(), currentDate.getDate()).getTime() - new Date(currentDate.getMonth() > 2 ? year : (year - 1), 2, 1).getTime()) / 86400000);
 
     const isLeapYear = ((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0);
 

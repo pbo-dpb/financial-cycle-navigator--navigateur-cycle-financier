@@ -20,5 +20,6 @@
     "fincyable_label_blog": "PBO Additional Analysis",
     "fincyable_label_RP": "PBO Report",
     "fincyable_label_LEG": "PBO Note",
-    "collapsible_component_handle": "About"
+    "collapsible_component_handle": "About",
+    "current_fiscal_year": "Current fiscal year:"
 }

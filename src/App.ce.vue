@@ -11,6 +11,16 @@
 
     </div>
 
+    <Waterfall :draw-background="false">
+
+      <CurrentFiscalYearIndicaor></CurrentFiscalYearIndicaor>
+
+    </Waterfall>
+
+    <div class="flex flex-col gap-4">
+
+    </div>
+
     <Waterfall class="rounded-t-lg">
       <Month v-for="(month, index) in [3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 1, 2, 3]" :key="month" :month="month"
         :is-previous-year="!index"></Month>
@@ -32,6 +42,7 @@ import Month from './components/Month.vue'
 import Waterfall from './components/Waterfall.vue'
 import WaterfallEvent from './components/WaterfallEvent/WaterfallEvent.vue'
 import CollapsibleIntro from './components/CollapsibleIntro.vue'
+import CurrentFiscalYearIndicaor from './components/CurrentFiscalYearIndicaor.vue'
 
 const DebugBar = defineAsyncComponent(() =>
   import("./components/DebugBar.vue")
@@ -68,7 +79,8 @@ export default {
     Month,
     Waterfall,
     WaterfallEvent,
-    CollapsibleIntro
+    CollapsibleIntro,
+    CurrentFiscalYearIndicaor
   }
 };
 </script>
