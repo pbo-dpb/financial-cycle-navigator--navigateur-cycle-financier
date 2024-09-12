@@ -80,7 +80,7 @@ const waterfallArrowHtml = computed(() => {
     textElement.setAttribute('x', waterfallWidth.value / 2);
     textElement.setAttribute('y', 20);
     textElement.setAttribute('text-anchor', 'middle');
-    textElement.setAttribute('dominant-baseline', 'central');
+    textElement.setAttribute('dominant-baseline', 'middle');
     textElement.setAttribute('font-size', 14);
     textElement.setAttribute('font-weight', '500');
     textElement.setAttribute('fill', color);
@@ -88,8 +88,6 @@ const waterfallArrowHtml = computed(() => {
     containerSvg.appendChild(textElement);
 
     const approxTextWidth = strings.value.current_fiscal_year.length > 20 ? 280 : 220;
-
-
 
     const leftLine = document.createElementNS('http://www.w3.org/2000/svg', 'line');
     leftLine.setAttribute('x1', 5);
@@ -110,9 +108,6 @@ const waterfallArrowHtml = computed(() => {
     rightLine.setAttribute('stroke-width', 1);
     rightLine.setAttribute('marker-end', 'url(#arrow)');
     containerSvg.appendChild(rightLine);
-
-
-
 
     return containerSvg.outerHTML;
 });
