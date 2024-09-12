@@ -28,6 +28,8 @@
 
   </div>
 
+  <WaterfallEventGroupLabel>{{ strings.planned_spending_label }}</WaterfallEventGroupLabel>
+
   <WaterfallEvent v-for="(ev, index) in eventGroups.planned_spending" :key="ev.id" :event="ev"
     :is-last="index === events.length - 1">
 
