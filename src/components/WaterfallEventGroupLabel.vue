@@ -6,11 +6,9 @@
                 class="py-2 -mx-2 ml-0 px-2 text-sm font-semibold text-slate-600 flex flex-row items-center justify-between gap-0.5 bg-gradient-to-br from-gray-50 to-slate-50">
 
 
-                <slot></slot><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                    stroke="currentColor" class="size-4">
-                    <path stroke-linecap="round" stroke-linejoin="round"
-                        d="m4.5 5.25 7.5 7.5 7.5-7.5m-15 6 7.5 7.5 7.5-7.5" />
-                </svg>
+                <slot></slot>
+                <ChevronDoubleDownIcon class="size-4 text-slate-600 " aria-hidden="true"></ChevronDoubleDownIcon>
+
             </div>
             <Waterfall class="shrink-0">
                 &nbsp;
@@ -19,5 +17,6 @@
     </div>
 </template>
 <script setup>
+import { ChevronDoubleDownIcon } from '@heroicons/vue/16/solid';
 import Waterfall from './Waterfall.vue';
 </script>
