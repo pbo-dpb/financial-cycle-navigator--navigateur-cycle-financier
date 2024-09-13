@@ -71,7 +71,7 @@ const waterfallArrowHtml = computed(() => {
     const markerPath = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
     markerPath.setAttribute('x', 0);
     markerPath.setAttribute('y', -5);
-    markerPath.setAttribute('width', 1);
+    markerPath.setAttribute('width', 1.5);
     markerPath.setAttribute('height', 10);
     markerPath.setAttribute('fill', color);
     marker.appendChild(markerPath);
