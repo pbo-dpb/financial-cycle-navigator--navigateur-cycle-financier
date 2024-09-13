@@ -1,5 +1,6 @@
 <script setup>
 import { computed, ref, Transition } from 'vue'
+import { CalculatorIcon } from '@heroicons/vue/24/outline';
 
 import Waterfall from '../Waterfall.vue'
 import CycleDot from '../CycleDot.vue'
@@ -34,8 +35,11 @@ const open = ref(false);
             @click="open = !open">
             <div class="flex flex-row gap-4 py-4">
                 <div class="flex flex-col gap-1 text-right w-full">
-                    <div class="font-semibold text-slate-700 dark:text-white text-lg ">
-
+                    <div
+                        class="font-semibold text-slate-700 dark:text-white text-lg flex flex-row justify-end w-full items-center gap-1">
+                        <CalculatorIcon v-if="event.part_of_estimates_process" class="size-5 text-slate-400"
+                            aria-hidden="true">
+                        </CalculatorIcon>
                         {{ event.getName(language) }}
                     </div>
                     <div class="text-sm">{{ event.getShortDescription(language) }}</div>
