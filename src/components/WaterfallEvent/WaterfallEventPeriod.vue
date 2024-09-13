@@ -102,9 +102,12 @@ const render = () => {
                     "items-center",
                     "gap-1",
                     "pl-2",
+
+                    "text-sm",
+                    "tracking-tighter",
                     ...(fincy.value ? [
                         "text-teal-700"
-                    ] : ["text-slate-400"
+                    ] : ["text-slate-500"
                     ]),
                 ],
             }, [
