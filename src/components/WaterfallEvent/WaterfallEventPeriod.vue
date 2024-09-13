@@ -105,8 +105,8 @@ const render = () => {
                     "text-sm",
                     "tracking-tighter",
                     ...(fincy.value ? [
-                        "text-teal-700"
-                    ] : ["text-slate-500"
+                        "text-teal-700 dark:text-teal-100"
+                    ] : ["text-slate-500 dark:text-slate-200"
                     ]),
                 ],
             }, [

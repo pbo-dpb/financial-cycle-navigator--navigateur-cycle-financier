@@ -3,7 +3,7 @@
     <div class="group border-l-4 border-transparent  pl-2  -ml-2">
         <div class="lg:grid grid-cols-3 gap-x-4">
             <div
-                class="py-2 -mx-2 ml-0 px-2 text-sm font-semibold text-slate-600 flex flex-row items-center justify-between gap-0.5 bg-gradient-to-br from-gray-50 to-slate-50">
+                class="py-2 -mx-2 ml-0 px-2 text-sm font-semibold text-slate-600 flex flex-row items-center justify-between gap-0.5 bg-gradient-to-br from-gray-50 to-slate-50 dark:from-gray-900 dark:to-slate-900 dark:text-slate-400">
 
 
                 <slot></slot>
