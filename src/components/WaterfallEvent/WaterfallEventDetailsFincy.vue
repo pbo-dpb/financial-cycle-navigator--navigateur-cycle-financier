@@ -56,7 +56,9 @@ const openFincyable = (e) => {
         <div v-if="fincies === null || !fincy"
             class="rounded shadow-inner bg-white h-full flex flex-row items-center justify-center">
             <LoadingIndicator v-if="fincies === null" class="size-8 text-slate-800"></LoadingIndicator>
-            <span v-else class=" font-semibold text-sm italic">{{ strings['upcoming_report_long_label'] }}</span>
+            <span v-else class="font-thin text-lg text-center text-pretty">{{
+                strings['upcoming_report_long_label']
+                }}</span>
         </div>
         <figure role="link" tabindex="0" v-if="fincyable"
             class="flex flex-row gap-4  bg-white rounded shadow-inner h-full p-4 cursor-pointer" @click="openFincyable">
