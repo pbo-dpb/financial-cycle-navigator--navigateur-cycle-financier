@@ -1,6 +1,7 @@
 <script setup>
 import { computed } from 'vue'
 import Datasource from '../../stores/datasource.js'
+import { DocumentTextIcon } from '@heroicons/vue/24/outline';
 const store = Datasource()
 
 import LoadingIndicator from '../LoadingIndicator.vue'
@@ -52,40 +53,46 @@ const openFincyable = (e) => {
 }
 </script>
 <template>
-    <div class="h-full">
-        <div v-if="fincies === null || !fincy"
-            class="rounded shadow-inner bg-white h-full flex flex-row items-center justify-center">
-            <LoadingIndicator v-if="fincies === null" class="size-8 text-slate-800"></LoadingIndicator>
-            <span v-else class="font-thin text-lg text-center text-pretty">{{
-                strings['upcoming_report_long_label']
-                }}</span>
+    <div class="p-2 bg-teal-900 rounded">
+        <LoadingIndicator v-if="fincies === null" class="size-8 text-white"></LoadingIndicator>
+        <div v-else class="flex flex-col gap-2">
+            <div class="font-semibold flex flex-row items-center gap-1">
+                <DocumentTextIcon class="size-5 "></DocumentTextIcon>{{
+                    fincyable ? strings[`fincyable_label_${fincyable.type}`] : strings[`fincyable_label_generic`]
+                }}
+            </div>
+
+            <div class="border-l-2 border-teal-700 pl-2">
+                <figure role="link" tabindex="0" v-if="fincyable" class="flex flex-row gap-2 h-full cursor-pointer"
+                    @click="openFincyable">
+
+                    <div v-if="fincyable.coverpages && fincyable.coverpages.distribution[language].small"
+                        class="w-16  shadow-sm h-fit">
+                        <img :src="fincyable.coverpages.distribution[language].small" alt="">
+                    </div>
+                    <div class="w-full flex flex-col gap-0.5 justify-center">
+                        <aside
+                            class="text-xs flex flex-col flex-wrap gap-x-2 md:flex-row md:items-center justify-start text-white">
+                            {{ fincyable.release_date.toLocaleDateString(`${language}-CA`, {
+                                year: "numeric", month: "long",
+                                day: "numeric"
+                            }) }}</aside>
+                        <a :href="fincyable.permalink"
+                            class="leading-tight md:flex-row md:items-center justify-start text-white font-semibold underline text-sm">
+                            {{ fincyable[`title_${language}`] }}</a>
+
+                        <div v-if="fincyable.abstract" v-html="fincyable.abstract"
+                            class="text-xs leading-tight text-white">
+                        </div>
+
+                    </div>
+
+                </figure>
+                <div v-else class="italic">
+                    {{ strings[`upcoming_report_long_label`] }}
+                </div>
+            </div>
         </div>
-        <figure role="link" tabindex="0" v-if="fincyable"
-            class="flex flex-row gap-4  bg-white rounded shadow-inner h-full p-4 cursor-pointer" @click="openFincyable">
 
-            <div v-if="fincyable.coverpages && fincyable.coverpages.distribution[language].small"
-                class="w-16 border border-gray-300 dark:border-gray-700 shadow-sm h-fit">
-                <img :src="fincyable.coverpages.distribution[language].small" alt="">
-            </div>
-            <div class="w-full flex flex-col gap-0.5">
-                <div
-                    class="flex-none max-w-max px-2 py-1 font-semibold border-l-4 bg-gray-100 border-gray-800 text-gray-800 dark:bg-gray-800 dark:text-gray-200 dark:border-gray-200 text-xs">
-                    {{ strings[`fincyable_label_${fincyable.type}`] }}</div>
-
-                <aside
-                    class="text-sm flex flex-col flex-wrap gap-x-2 md:flex-row md:items-center justify-start text-gray-800 dark:text-gray-200">
-                    {{ fincyable.release_date.toLocaleDateString(`${language}-CA`, {
-                        year: "numeric", month: "long",
-                        day: "numeric"
-                    }) }}</aside>
-                <a :href="fincyable.permalink"
-                    class="leading-tight md:flex-row md:items-center justify-start text-sky-800 dark:text-sky-200 font-semibold underline">
-                    {{ fincyable[`title_${language}`] }}</a>
-
-                <div v-if="fincyable.abstract" v-html="fincyable.abstract" class="text-xs leading-tight"></div>
-
-            </div>
-
-        </figure>
     </div>
 </template>

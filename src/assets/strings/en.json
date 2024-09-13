@@ -21,6 +21,8 @@
     "fincyable_label_blog": "PBO Additional Analysis",
     "fincyable_label_RP": "PBO Report",
     "fincyable_label_LEG": "PBO Note",
+    "fincyable_label_generic": "PBO Analysis",
     "collapsible_component_handle": "About",
-    "current_fiscal_year": "Current fiscal year:"
+    "current_fiscal_year": "Current fiscal year:",
+    "government_document_label": "Government document"
 }

@@ -10,6 +10,7 @@ const strings = computed(() => store.strings)
 
 import { CalculatorIcon, ArrowUturnLeftIcon } from '@heroicons/vue/16/solid';
 import WaterfallEventDetailsFincy from './WaterfallEventDetailsFincy.vue';
+import WaterfallEventDetailsGovdocs from './WaterfallEventDetailsGovdocs.vue';
 
 const props = defineProps({
     event: {
@@ -27,11 +28,9 @@ const description = computed(() => {
 <template>
 
 
-    <div class="lg:grid grid-cols-5 gap-4 items-center p-4">
+    <div class="lg:flex flex-col gap-2 items-center p-4">
 
-        <div class="col-span-3 p-4 rounded bg-teal-800 text-white  flex flex-col gap-2" :class="{
-            'col-start-2 ': !event.fincy_document_type
-        }">
+        <div class=" p-4 rounded bg-teal-800 text-white  flex flex-col gap-4 w-full">
 
 
             <ul v-if="event.part_of_estimates_process || event.previous_spending"
@@ -50,12 +49,18 @@ const description = computed(() => {
             </ul>
 
             <div class="leading-snug  max-w-none" v-html="description"></div>
+
+            <WaterfallEventDetailsGovdocs :event="event" v-if="event.govdocs">
+            </WaterfallEventDetailsGovdocs>
+
+            <WaterfallEventDetailsFincy :event="event" v-if="event.fincy_document_type">
+            </WaterfallEventDetailsFincy>
+
         </div>
 
 
 
-        <WaterfallEventDetailsFincy class="col-span-2" :event="event" v-if="event.fincy_document_type">
-        </WaterfallEventDetailsFincy>
+
 
 
 
