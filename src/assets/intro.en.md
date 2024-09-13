@@ -1,8 +1,9 @@
 One of the central roles of Parliament is to authorize and oversee Government spending and taxation. The parliamentary financial cycle is an ongoing process through which Parliament considers the Government’s taxation and spending plans and reviews actual spending and financial results. 
  
 The PBO supports parliamentary debate throughout the financial cycle by:
+
 - Publishing regular reports on the Budget and Estimates documents; 
-- Providing independent cost estimates of Budget measures;
+- Providing independent cost estimates of Budget measures and legislation;
 - Briefing members of Parliament on the Estimates documents and process; and
 - Providing witness testimony in committees.
 

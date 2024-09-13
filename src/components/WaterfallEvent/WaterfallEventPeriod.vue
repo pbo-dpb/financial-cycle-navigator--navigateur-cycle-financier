@@ -113,7 +113,7 @@ const render = () => {
                 h(ArrowTurnDownRightIcon, { 'class': "size-4 shrink-0" }),
                 fincy.value ? h('img', {
                     src: fincy.value.publication.coverpages.distribution[language.value].small,
-                    class: "h-4 border border-slate-500 shrink-0 shadow"
+                    class: "h-4 border border-slate-300 shrink-0 shadow"
                 }) : null,
                 h('span', {
                     class: "shrink-0"

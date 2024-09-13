@@ -1,11 +1,11 @@
-L'un des rôles centraux du Parlement est d'autoriser et de superviser les dépenses et la fiscalité du gouvernement. Le cycle financier parlementaire est un processus continu au cours duquel le Parlement examine les plans de fiscalité et de dépenses du gouvernement et passe en revue les dépenses réelles et les résultats financiers.
+L’un des principaux rôles du Parlement consiste à autoriser et à surveiller les dépenses et les mesures fiscales du gouvernement. Le cycle financier parlementaire est un processus continu dans le cadre duquel le Parlement examine les plans financiers du gouvernement et vérifie les dépenses et les résultats financiers réels. 
+ 
+Pour faciliter les débats parlementaires tout au long de ce cycle, le directeur parlementaire du budget :
 
-Le DPB soutient le débat parlementaire tout au long du cycle financier en :
+- publie régulièrement des rapports sur le budget et les documents budgétaires; 
+- fournit des estimations indépendantes sur le coût des mesures budgétaires et de la législation;
+- renseigne les députés sur le processus et les documents budgétaires;
+- fournit des témoignages aux comités.
 
-Publiant des rapports réguliers sur les documents du budget et des prévisions;
-Fournissant des estimations indépendantes des coûts des mesures budgétaires;
-Informant les membres du Parlement sur les documents de prévisions et le processus;
-Offrant des témoignages en tant que témoin dans les comités.
-Le Navigateur du cycle financier parlementaire aide les utilisateurs à visualiser leur position actuelle au sein du cycle financier. Il permet aux utilisateurs de voir ce qui a été publié et offre un accès facile aux documents clés. De plus, l'outil met en évidence les rapports existants et à venir du DPB qui soutiennent les parlementaires dans l'analyse des plans de dépenses du gouvernement pour l'année fiscale en cours.
-
-Pour toute question sur le cycle financier parlementaire, ou pour demander un briefing, veuillez [nous contacter](https://www.pbo-dpb.ca/fr/contact--contact).
+L’Explorateur du cycle financier parlementaire permet aux utilisateurs de se repérer dans le cycle financier, de savoir quels documents ont été publiés et d’accéder facilement à des documents clés. Il met aussi en évidence les rapports existants ou à venir du DPB qui aident les parlementaires à analyser les plans de dépenses du gouvernement pour l’exercice en cours.
+Si vous avez des questions sur le cycle financier parlementaire ou que vous voulez demander une séance d’information, veuillez [nous contacter](https://www.pbo-dpb.ca/fr/contact--contact). 
