@@ -1,7 +1,21 @@
 <script setup>
-import { computed, h, inject } from 'vue'
+import { computed, h, inject, Transition } from 'vue'
+import Datasource from '../../stores/datasource.js'
+const store = Datasource()
+const language = computed(() => store.language)
+const strings = computed(() => store.strings)
+
 import CycleBar from '../CycleBar.vue';
 import CycleEvent from '../../models/CycleEvent';
+import { ArrowTurnDownRightIcon } from '@heroicons/vue/16/solid';
+const fincies = computed(() => store.fincies)
+
+const fincy = computed(() => {
+    if (!fincies.value) return false;
+    let fiscalYearStart = (new Date()).getMonth() <= 2 ? (new Date()).getFullYear() - 1 : (new Date()).getFullYear();
+    return fincies.value.find(f => f.document_type === props.event.fincy_document_type && f.fiscal_year_start == fiscalYearStart);
+});
+
 const waterfallColWidth = inject('waterfallColW')
 
 const getDaysInMonth = (date) => {
@@ -72,7 +86,37 @@ const render = () => {
             class: [(props.event.end ? "w-full h-4" : "size-4"), "group-hover:drop-shadow-lg", "group-hover:group-open:drop-shadow-none", "transition-shadow"],
             color: props.event.color,
             width: getBarWidth()
-        })
+        }),
+        (props.event.fincy_document_type && fincies.value) ?
+            h(Transition, {
+                enterFromClass: "opacity-0 pl-8",
+                enterActiveClass: "transition-all duration-1000 "
+
+            }, () => h('div', {
+                class: [
+                    "w-fit",
+                    "text-nowrap",
+                    "text-ssm",
+                    "flex",
+                    "flex-row",
+                    "items-center",
+                    "gap-1",
+                    "pl-2",
+                    ...(fincy.value ? [
+                        "text-teal-700"
+                    ] : ["text-slate-400"
+                    ]),
+                ],
+            }, [
+                h(ArrowTurnDownRightIcon, { 'class': "size-4 shrink-0" }),
+                fincy.value ? h('img', {
+                    src: fincy.value.publication.coverpages.distribution[language.value].small,
+                    class: "h-4 rounded shrink-0 shadow"
+                }) : null,
+                h('span', {
+                    class: "shrink-0"
+                }, fincy.value === false ? '' : fincy.value ? strings.value[`fincyable_label_${fincy.value.publication.type}`] : strings.value.upcoming_report_short_label)
+            ])) : null
     ]);
 };
 </script>
