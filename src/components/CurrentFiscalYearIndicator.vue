@@ -60,15 +60,20 @@ const waterfallArrowHtml = computed(() => {
     const defs = document.createElementNS('http://www.w3.org/2000/svg', 'defs');
     const marker = document.createElementNS('http://www.w3.org/2000/svg', 'marker');
     marker.setAttribute('id', 'arrow');
-    marker.setAttribute('viewBox', '0 0 10 10');
-    marker.setAttribute('refX', '5');
-    marker.setAttribute('refY', '5');
-    marker.setAttribute('markerWidth', '6');
-    marker.setAttribute('markerHeight', '6');
-    marker.setAttribute('fill', color);
-    marker.setAttribute('orient', 'auto-start-reverse');
-    const markerPath = document.createElementNS('http://www.w3.org/2000/svg', 'path');
-    markerPath.setAttribute('d', 'M 0 0 L 10 5 L 0 10 z');
+    marker.setAttribute('viewBox', '-2 -6 4 12');
+    marker.setAttribute('refX', '0');
+    marker.setAttribute('refY', '0');
+    marker.setAttribute('markerWidth', '4');
+    marker.setAttribute('markerHeight', '12');
+    marker.setAttribute('markerUnits', 'userSpaceOnUse');
+    marker.setAttribute('orient', 'auto');
+
+    const markerPath = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
+    markerPath.setAttribute('x', 0);
+    markerPath.setAttribute('y', -5);
+    markerPath.setAttribute('width', 1);
+    markerPath.setAttribute('height', 10);
+    markerPath.setAttribute('fill', color);
     marker.appendChild(markerPath);
 
     defs.appendChild(marker);
