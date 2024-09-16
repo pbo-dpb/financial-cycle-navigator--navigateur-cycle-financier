@@ -6,7 +6,8 @@ const language = computed(() => store.language)
 const strings = computed(() => store.strings)
 
 import CycleEvent from '../../models/CycleEvent';
-import { ArrowTurnDownRightIcon } from '@heroicons/vue/16/solid';
+import { ArrowTurnDownRightIcon, CheckIcon } from '@heroicons/vue/16/solid';
+import WaterfallEventReportingIndicatorBadge from './WaterfallEventReportingIndicatorBadge.vue';
 const fincies = computed(() => store.fincies)
 
 const fincy = computed(() => {
@@ -23,7 +24,7 @@ const props = defineProps({
 
 
 const render = () => {
-    return (props.event.fincy_document_type && fincies.value) ?
+    return (fincies.value) ?
         h(Transition, {
             enterFromClass: "opacity-0 pl-8",
             enterActiveClass: "transition-all duration-1000 "
@@ -39,7 +40,7 @@ const render = () => {
                 "pl-2",
                 "text-sm",
                 "tracking-tighter",
-                'rounded bg-teal-600 dark:bg-teal-400 px-2 lg:rounded-none lg:bg-transparent lg:dark:bg-transparent lg:px-0',
+                "lg:mt-1",
                 ...(fincy.value ? [
                     "lg:text-teal-700 lg:dark:text-teal-100 text-white"
                 ] : ["lg:text-slate-500 lg:dark:text-slate-200 text-white"
@@ -48,13 +49,15 @@ const render = () => {
             ],
         }, [
             h(ArrowTurnDownRightIcon, { 'class': "size-4 shrink-0 hidden lg:block" }),
-            fincy.value ? h('img', {
-                src: fincy.value.publication.coverpages.distribution[language.value].small,
-                class: "h-4 border border-slate-300 shrink-0 shadow"
-            }) : null,
-            h('span', {
-                class: "shrink-0"
-            }, fincy.value === false ? '' : fincy.value ? strings.value[`fincyable_label_${fincy.value.publication.type}`] : strings.value.upcoming_report_short_label)
+            h(WaterfallEventReportingIndicatorBadge, {
+                type: "gov",
+                upcoming: props.event.govdocs[language.value].length === 0,
+            }),
+            props.event.fincy_document_type ? h(WaterfallEventReportingIndicatorBadge, {
+                type: "pbo",
+                upcoming: fincy.value ? false : true,
+
+            }) : null
         ])) : null
 };
 </script>

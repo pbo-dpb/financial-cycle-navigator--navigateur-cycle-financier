@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@heroicons/vue": "^2.1.5",
+    "floating-vue": "^5.2.2",
     "marked": "^14.0.0",
     "pinia": "^2.1.7",
     "vue": "^3.4.30"
