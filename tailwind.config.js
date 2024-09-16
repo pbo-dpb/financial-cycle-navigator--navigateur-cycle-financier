@@ -14,6 +14,9 @@ module.exports = {
         "13": "13",
         "14": "14",
       },
+      gridColumn: {
+        'span-13': 'span 13 / span 13',
+      }
     },
   },
   plugins: [

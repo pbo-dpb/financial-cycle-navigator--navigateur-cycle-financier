@@ -106,7 +106,8 @@ const waterfallStyle = computed(() => {
 
 </script>
 <template>
-    <div class="col-span-2 grid grid-cols-13" ref="waterfall" :style="waterfallStyle">
+    <div class="col-span-2 grid grid-cols-13 rounded-lg lg:rounded-none pb-2 lg:pb-0" ref="waterfall"
+        :style="waterfallStyle">
         <slot></slot>
     </div>
 </template>

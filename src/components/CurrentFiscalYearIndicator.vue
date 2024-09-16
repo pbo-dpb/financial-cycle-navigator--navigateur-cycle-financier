@@ -1,6 +1,6 @@
 <template>
     <div></div>
-    <div class="col-span-12" v-html="waterfallArrowHtml" ref="waterfall">
+    <div class="col-span-12" v-html="waterfallArrowHtml" ref="waterfall" v-bind="$attrs">
     </div>
 
 </template>

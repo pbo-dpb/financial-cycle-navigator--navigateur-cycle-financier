@@ -1,29 +1,28 @@
 <template>
   <DebugBar v-if="debug"></DebugBar>
 
-  <div class="hidden lg:grid grid-cols-3 gap-x-4 border-l-4 border-transparent pl-2 -ml-2">
+  <div class="flex flex-col lg:grid grid-cols-3 gap-x-4 border-l-4 border-transparent pl-2 -ml-2">
 
     <div class="col-span-3 mb-4">
       <CollapsibleIntro></CollapsibleIntro>
     </div>
 
     <div class="flex flex-col gap-4">
-
+      &nbsp;
     </div>
 
-    <Waterfall :draw-background="false">
+    <Waterfall class="hidden lg:grid" :draw-background="false">
 
       <CurrentFiscalYearIndicator></CurrentFiscalYearIndicator>
 
     </Waterfall>
 
-    <div class="flex flex-col gap-4">
+    <div class="hidden lg:flex flex-col gap-4">
 
     </div>
 
-    <Waterfall class="rounded-t-lg">
-      <Month v-for="(month, index) in [3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 1, 2, 3]" :key="month" :month="month"
-        :is-previous-year="!index"></Month>
+    <Waterfall class="hidden lg:grid rounded-t-lg">
+      <Months></Months>
     </Waterfall>
 
   </div>
@@ -36,7 +35,7 @@
   </WaterfallEvent>
 
 
-  <WaterfallEventGroupLabel>{{ strings.previous_spending_label }}</WaterfallEventGroupLabel>
+  <WaterfallEventGroupLabel class="mt-8 lg:mt-0">{{ strings.previous_spending_label }}</WaterfallEventGroupLabel>
   <WaterfallEvent v-for="(ev, index) in eventGroups.previous_spending" :key="ev.id" :event="ev"
     :is-last="index === events.length - 1">
   </WaterfallEvent>
@@ -48,7 +47,7 @@ import { defineAsyncComponent } from 'vue'
 import WrapperEventDispatcher from "./WrapperEventDispatcher.js"
 import { mapState, mapWritableState, mapActions } from 'pinia'
 import Datasource from './stores/datasource.js'
-import Month from './components/Month.vue'
+import Months from './components/Months.vue'
 import Waterfall from './components/Waterfall.vue'
 import WaterfallEvent from './components/WaterfallEvent/WaterfallEvent.vue'
 import CollapsibleIntro from './components/CollapsibleIntro.vue'
@@ -95,7 +94,7 @@ export default {
   },
   components: {
     DebugBar,
-    Month,
+    Months,
     Waterfall,
     WaterfallEvent,
     CollapsibleIntro,
