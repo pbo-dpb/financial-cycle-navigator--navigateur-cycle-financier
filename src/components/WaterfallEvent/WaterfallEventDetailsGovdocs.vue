@@ -1,9 +1,10 @@
 <script setup>
 import govLogo from "../../assets/govlogo.svg?url";
+import govGlyph from '../../assets/gov-glyph.svg?url'
 
 import { computed } from 'vue'
 import Datasource from '../../stores/datasource.js'
-import { DocumentTextIcon, ArrowTopRightOnSquareIcon } from '@heroicons/vue/24/outline';
+import { ArrowTopRightOnSquareIcon } from '@heroicons/vue/24/outline';
 const store = Datasource()
 
 import CycleEvent from '../../models/CycleEvent';
@@ -30,8 +31,8 @@ const openGovdoc = (gvd) => {
 </script>
 <template>
     <div v-for="govdoc in govdocs" class="p-2 bg-teal-900 rounded flex flex-col gap-2">
-        <div class="font-semibold flex flex-row items-center gap-1">
-            <DocumentTextIcon class="size-5 "></DocumentTextIcon>{{
+        <div class="font-semibold flex flex-row items-center gap-2">
+            <img :src="govGlyph" class="size-4" alt="" style=" filter: grayscale(1) brightness(3);">{{
                 strings.government_document_label
             }}
         </div>
