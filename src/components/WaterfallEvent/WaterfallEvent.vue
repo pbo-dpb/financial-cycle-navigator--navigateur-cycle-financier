@@ -38,8 +38,8 @@ const open = ref(false);
             @click="open = !open">
             <div class="flex flex-row gap-4 py-4">
                 <div class="flex flex-col gap-1 lg:text-right w-full">
-                    <div
-                        class="font-semibold text-slate-700 dark:text-white text-lg flex  lg:flex-row lg:justify-end w-full items-center gap-1">
+                    <div class="font-semibold text-slate-700 dark:text-white text-lg flex  lg:flex-row lg:justify-end w-full items-center gap-1"
+                        :class="{ 'opacity-80': event.previous_spending }">
                         <CalculatorIcon v-if="event.part_of_estimates_process" class="size-5 text-slate-400"
                             aria-hidden="true">
                         </CalculatorIcon>

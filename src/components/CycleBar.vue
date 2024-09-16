@@ -8,10 +8,14 @@ const props = defineProps({
         type: Number,
         default: 16
     },
+    upcoming: {
+        type: Boolean,
+        default: false
+    }
 })
 </script>
 <template>
     <svg :viewBox="`0 0 ${props.width} 16`" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-        <rect :width="props.width" height="100%" rx="4" :fill="color" />
+        <rect :width="props.width" height="100%" rx="4" :fill="color" :opacity="upcoming ? 1 : 0.6" />
     </svg>
 </template>
