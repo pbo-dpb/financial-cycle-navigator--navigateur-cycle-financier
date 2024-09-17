@@ -37,7 +37,7 @@ const render = () => {
                 "flex-row",
                 "items-center",
                 "gap-1",
-                "pl-2",
+                "lg:pl-2",
                 "text-sm",
                 "tracking-tighter",
                 "lg:mt-1",
