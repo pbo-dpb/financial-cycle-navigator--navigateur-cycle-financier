@@ -1,8 +1,8 @@
 <script setup>
 import { computed } from 'vue'
 import Datasource from '../../stores/datasource.js'
-import { DocumentTextIcon } from '@heroicons/vue/24/outline';
 const store = Datasource()
+import pboGlyph from '../../assets/pbo-glyph.svg?url'
 
 import LoadingIndicator from '../LoadingIndicator.vue'
 import CycleEvent from '../../models/CycleEvent';
@@ -56,8 +56,9 @@ const openFincyable = (e) => {
     <div class="p-2 bg-teal-900 rounded">
         <LoadingIndicator v-if="fincies === null" class="size-8 text-white"></LoadingIndicator>
         <div v-else class="flex flex-col gap-2">
-            <div class="font-semibold flex flex-row items-center gap-1">
-                <DocumentTextIcon class="size-5 "></DocumentTextIcon>{{
+            <div class="font-semibold flex flex-row items-center gap-2">
+                <img :src="pboGlyph" class="size-4" alt="" style=" filter: grayscale(1) brightness(3);">
+                {{
                     fincyable ? strings[`fincyable_label_${fincyable.type}`] : strings[`fincyable_label_generic`]
                 }}
             </div>

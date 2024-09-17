@@ -58,7 +58,7 @@ const props = defineProps({
 
 const gridClasses = computed(() => {
     return [
-        "lg:pt-6",
+        "lg:pt-2",
         getColStart(),
         getColSpan()
     ];

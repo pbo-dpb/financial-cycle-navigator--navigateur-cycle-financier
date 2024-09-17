@@ -17,12 +17,15 @@
     "previous_spending_label": "Dépenses antérieures",
     "planned_spending_label": "Dépenses prévues",
     "upcoming_report_long_label": "Fait partie des publications principales du DPB. Le DPB publiera une analyse.",
-    "upcoming_report_short_label": "Analyse du DPB à venir",
     "fincyable_label_blog": "Analyse complémentaire du DPB",
     "fincyable_label_RP": "Rapport du DPB",
     "fincyable_label_LEG": "Note du DPB",
     "fincyable_label_generic": "Analyse du DPB",
     "collapsible_component_handle": "À propos",
     "current_fiscal_year": "Exercice financier courant :",
-    "government_document_label": "Document du gouvernement"
+    "government_document_label": "Document du gouvernement",
+    "readyness_gov_upcoming": "Document du gouvernement à venir",
+    "readyness_pbo_upcoming": "Analyse du DPB à venir",
+    "readyness_pbo_released": "Analyse du DPB publiée",
+    "readyness_gov_released": "Document du gouvernement publié"
 }

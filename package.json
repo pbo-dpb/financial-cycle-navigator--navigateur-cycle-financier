@@ -9,16 +9,17 @@
   },
   "dependencies": {
     "@heroicons/vue": "^2.1.5",
-    "marked": "^14.0.0",
-    "pinia": "^2.1.7",
-    "vue": "^3.4.30"
+    "floating-vue": "^5.2.2",
+    "marked": "^14.1.0",
+    "pinia": "^2.2",
+    "vue": "^3.5"
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.14",
-    "@vitejs/plugin-vue": "^5.0.5",
+    "@vitejs/plugin-vue": "^5.1",
     "autoprefixer": "^10.4.19",
     "postcss": "^8.4.38",
     "tailwindcss": "^3.4.4",
-    "vite": "^5.3.1"
+    "vite": "^5.4"
   }
 }
