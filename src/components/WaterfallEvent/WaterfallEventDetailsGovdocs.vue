@@ -24,9 +24,7 @@ const props = defineProps({
     }
 });
 
-const openGovdoc = (gvd) => {
-    window.open(gvd, '_blank').focus();
-}
+
 
 </script>
 <template>
@@ -38,20 +36,20 @@ const openGovdoc = (gvd) => {
         </div>
 
         <div class="border-l-2 border-teal-700 pl-2">
-            <figure role="link" tabindex="0" class="flex flex-row gap-2 h-full cursor-pointer items-center"
-                @click="openGovdoc(govdoc)">
+            <a :href="govdoc" target="_blank" role="link" tabindex="0"
+                class="flex flex-row gap-2 h-full cursor-pointer items-center" @click="openGovdoc(govdoc)">
 
                 <div class="w-16  shadow-sm h-20 flex bg-gradient-to-br from-teal-600 to-teal-800 p-2">
                     <img :src="govLogo" alt="" class="place-center">
                 </div>
 
-                <a :href="govdoc"
-                    class="leading-tight md:flex-row md:items-center justify-start text-white font-semibold underline text-sm"
-                    target="_blank">
+                <div
+                    class="leading-tight md:flex-row md:items-center justify-start text-white font-semibold underline text-sm">
                     {{ event[`name_${language}`] }} <ArrowTopRightOnSquareIcon class="size-4 inline-block">
-                    </ArrowTopRightOnSquareIcon></a>
+                    </ArrowTopRightOnSquareIcon>
+                </div>
 
-            </figure>
+            </a>
 
         </div>
 
