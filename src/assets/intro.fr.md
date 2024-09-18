@@ -7,6 +7,6 @@ Pour faciliter les débats parlementaires tout au long de ce cycle, le directeur
 - renseigne les députés sur le processus et les documents budgétaires;
 - fournit des témoignages aux comités.
 
-Le Navigateur du cycle financier parlementaire aide les utilisateurs à suivre les activités qui se déroulent tout au long de l’exercice financier. Il permet aux utilisateurs de voir ce qui a été publié et offre un accès facile à des documents clés. Il met aussi en évidence les rapports existants ou à venir du DPB qui aident les parlementaires à analyser les plans de dépenses du gouvernement pour l’exercice en cours.
+L'Explorateur du cycle financier parlementaire aide les utilisateurs à suivre les activités qui se déroulent tout au long de l’exercice financier. Il permet aux utilisateurs de voir ce qui a été publié et offre un accès facile à des documents clés. Il met aussi en évidence les rapports existants ou à venir du DPB qui aident les parlementaires à analyser les plans de dépenses du gouvernement pour l’exercice en cours.
 
 Si vous avez des questions sur le cycle financier parlementaire ou que vous voulez demander une séance d’information, veuillez [nous contacter](https://www.pbo-dpb.ca/fr/contact--contact). 
