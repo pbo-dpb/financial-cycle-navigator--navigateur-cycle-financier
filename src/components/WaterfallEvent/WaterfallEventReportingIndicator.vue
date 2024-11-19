@@ -15,6 +15,10 @@ const fincy = computed(() => {
     let fiscalYearStart = store.currentFyStartYear;
     let fincy = fincies.value.find(f => f.document_type === props.event.fincy_document_type && f.fiscal_year_start == fiscalYearStart);
 
+    if (!fincy) return null;
+
+    if (!fincy.publication ?? null) return false;
+
     return fincy;
 });
 
