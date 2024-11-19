@@ -13,13 +13,31 @@ export default defineStore('datasource', {
         events: [],
         currentDate: (new Date()).toISOString().split('T')[0],
         highlightEvent: null,
-        fincies: null
+        fincies: null,
+        govdocs: null,
     }),
 
     getters: {
         strings(state) {
             return state.iStrings[state.language];
         },
+        currentFyStartYear(state) {
+            // Get the current fiscal year. This will be invalid for a few hours on April 1st. ¯\_(ツ)_/¯ 
+
+            const currentDate = new Date(state.currentDate);
+            const currentYear = currentDate.getFullYear();
+            const currentMonth = currentDate.getMonth();
+
+            let firstYear = currentYear;
+            if (currentMonth < 3) {
+                firstYear = currentYear - 1;
+            }
+            return firstYear;
+        },
+        currentFy() {
+            const firstYear = this.currentFyStartYear;
+            return firstYear.toString().slice(2) + (firstYear + 1).toString().slice(2);
+        }
     },
 
     actions: {
@@ -34,13 +52,19 @@ export default defineStore('datasource', {
         },
         async fetchEvents() {
 
-            const response = await fetch('https://financial-cycle-navigator--navigateur-cycle-financier-prod.s3.ca-central-1.amazonaws.com/govdocs.json')
-            if (!response.ok) {
-                throw new Error(`Response status: ${response.status}`);
+            if (!this.govdocs) {
+                const response = await fetch('https://pfcn-ecfp.pbo-dpb.ca/govdocs.json')
+                if (!response.ok) {
+                    throw new Error(`Response status: ${response.status}`);
+                }
+                const govdocs = await response.json();
+                this.govdocs = govdocs;
             }
-            const govdocs = await response.json();
 
-            this.events = payload.events.map((event) => new CycleEvent(event, govdocs));
+            const currentFyGovdocs = this.govdocs[this.currentFy];
+
+            this.events = payload.events.map((event) => new CycleEvent(event, currentFyGovdocs));
         }
-    }
+    },
+
 })

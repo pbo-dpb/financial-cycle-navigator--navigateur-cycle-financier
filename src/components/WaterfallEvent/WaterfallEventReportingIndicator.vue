@@ -12,8 +12,10 @@ const fincies = computed(() => store.fincies)
 
 const fincy = computed(() => {
     if (!fincies.value) return false;
-    let fiscalYearStart = (new Date()).getMonth() <= 2 ? (new Date()).getFullYear() - 1 : (new Date()).getFullYear();
-    return fincies.value.find(f => f.document_type === props.event.fincy_document_type && f.fiscal_year_start == fiscalYearStart);
+    let fiscalYearStart = store.currentFyStartYear;
+    let fincy = fincies.value.find(f => f.document_type === props.event.fincy_document_type && f.fiscal_year_start == fiscalYearStart);
+
+    return fincy;
 });
 
 const props = defineProps({

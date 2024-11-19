@@ -4,7 +4,7 @@
         <div class="font-mono text-gray-800 dark:text-white flex flex-col gap-2">
             <div>🔧 DEBUG</div>
             <label>
-                Current date:
+                Current date (FY {{ currentFy }}):
                 <input type="date" v-model="currentDate">
             </label>
         </div>
@@ -22,7 +22,7 @@ import Datasource from '../stores/datasource.js'
 
 export default {
     computed: {
-        ...mapWritableState(Datasource, ['language', 'currentDate']),
+        ...mapWritableState(Datasource, ['language', 'currentDate', 'currentFy']),
     },
 
     components: {

@@ -62,7 +62,7 @@ export default {
   computed: {
 
     ...mapWritableState(Datasource, ['language', 'highlightEvent']),
-    ...mapState(Datasource, ['strings', 'events']),
+    ...mapState(Datasource, ['strings', 'events', 'currentFy']),
     debug() {
       return this.$root.debug;
     },
@@ -91,6 +91,9 @@ export default {
   watch: {
     language() {
       this.setPageTitle();
+    },
+    currentFy() {
+      this.fetchEvents();
     }
   },
   components: {

@@ -14,7 +14,10 @@ export default class CycleEvent {
 
         this.fincy_document_type = obj.fincy_document_type || null;
 
-        this.govdocs = govdocs[obj.id];
+        this.govdocs = {
+            "en": govdocs?.[obj.id]?.en ?? [],
+            "fr": govdocs?.[obj.id]?.fr ?? []
+        };
 
         if (!this.color && this.part_of_estimates_process) {
             this.color = "#14b8a6";
