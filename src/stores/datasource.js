@@ -10,7 +10,7 @@ export default defineStore('datasource', {
     state: () => ({
         language: document.documentElement.lang,
         iStrings: { en, fr },
-        events: payload.events.map((event) => new CycleEvent(event)),
+        events: [],
         currentDate: (new Date()).toISOString().split('T')[0],
         highlightEvent: null,
         fincies: null
@@ -31,6 +31,16 @@ export default defineStore('datasource', {
             }
             const json = await response.json();
             this.fincies = json.data.map(fincy => new Fincy(fincy));
+        },
+        async fetchEvents() {
+
+            const response = await fetch('https://financial-cycle-navigator--navigateur-cycle-financier-prod.s3.ca-central-1.amazonaws.com/govdocs.json')
+            if (!response.ok) {
+                throw new Error(`Response status: ${response.status}`);
+            }
+            const govdocs = await response.json();
+
+            this.events = payload.events.map((event) => new CycleEvent(event, govdocs));
         }
     }
 })

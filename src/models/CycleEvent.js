@@ -1,7 +1,6 @@
-import govdocs from '../assets/govdocs.json'
 
 export default class CycleEvent {
-    constructor(obj) {
+    constructor(obj, govdocs) {
         obj && Object.assign(this, obj);
 
 

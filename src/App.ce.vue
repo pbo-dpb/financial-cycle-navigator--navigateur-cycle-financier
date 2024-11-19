@@ -79,10 +79,11 @@ export default {
 
   mounted() {
     this.setPageTitle();
+    this.fetchEvents();
     this.fetchFincies();
   },
   methods: {
-    ...mapActions(Datasource, ['fetchFincies']),
+    ...mapActions(Datasource, ['fetchFincies', 'fetchEvents']),
     setPageTitle() {
       (new WrapperEventDispatcher(this.strings.title, null)).dispatch();
     }
