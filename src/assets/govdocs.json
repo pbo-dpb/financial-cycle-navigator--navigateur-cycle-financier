@@ -33,8 +33,12 @@
             ]
         },
         "fall_economic_statement": {
-            "en": [],
-            "fr": []
+            "en": [
+                "https://www.budget.canada.ca/update-miseajour/2024/home-accueil-en.html"
+            ],
+            "fr": [
+                "https://www.budget.canada.ca/update-miseajour/2024/home-accueil-fr.html"
+            ]
         },
         "supplementary_estimates_b": {
             "en": [
