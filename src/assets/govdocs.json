@@ -49,6 +49,68 @@
             ]
         },
         "departmental_results_reports": {
+            "en": "https://www.justice.gc.ca/eng/rp-pr/cp-pm/dpr-rr/2023_2024/index.html",
+            "fr": "https://www.justice.gc.ca/fra/pr-rp/pm-cp/rr-dpr/2023_2024/index.html"
+        },
+        "public_accounts": {
+            "en": "https://www.canada.ca/en/public-services-procurement/services/payments-accounting/public-accounts/2024.html",
+            "fr": "https://www.canada.ca/fr/services-publics-approvisionnement/services/paiements-comptabilite/comptes-publics/2024.html"
+        },
+        "supplementary_estimates_c": {
+            "en": [],
+            "fr": []
+        }
+    },
+    "2526": {
+        "main_estimates": {
+            "en": [
+                "https://www.canada.ca/en/treasury-board-secretariat/services/planned-government-spending/government-expenditure-plan-main-estimates/2025-26-estimates.html"
+            ],
+            "fr": [
+                "https://www.canada.ca/fr/secretariat-conseil-tresor/services/depenses-prevues/plan-depenses-budget-principal/2025-26-budget-depenses.html"
+            ]
+        },
+        "departmental_plans": {
+            "en": [
+                []
+            ],
+            "fr": [
+                []
+            ]
+        },
+        "budget": {
+            "en": [
+                []
+            ],
+            "fr": [
+                []
+            ]
+        },
+        "supplementary_estimates_a": {
+            "en": [
+                []
+            ],
+            "fr": [
+                []
+            ]
+        },
+        "fall_economic_statement": {
+            "en": [
+                []
+            ],
+            "fr": [
+                []
+            ]
+        },
+        "supplementary_estimates_b": {
+            "en": [
+                []
+            ],
+            "fr": [
+                []
+            ]
+        },
+        "departmental_results_reports": {
             "en": [],
             "fr": []
         },
@@ -61,4 +123,5 @@
             "fr": []
         }
     }
+        
 }
