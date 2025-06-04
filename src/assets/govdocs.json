@@ -71,44 +71,24 @@
             ]
         },
         "departmental_plans": {
-            "en": [
-                []
-            ],
-            "fr": [
-                []
-            ]
+            "en": [],
+            "fr": []
         },
         "budget": {
-            "en": [
-                []
-            ],
-            "fr": [
-                []
-            ]
+            "en": [],
+            "fr": []
         },
         "supplementary_estimates_a": {
-            "en": [
-                []
-            ],
-            "fr": [
-                []
-            ]
+            "en": [],
+            "fr": []
         },
         "fall_economic_statement": {
-            "en": [
-                []
-            ],
-            "fr": [
-                []
-            ]
+            "en": [],
+            "fr": []
         },
         "supplementary_estimates_b": {
-            "en": [
-                []
-            ],
-            "fr": [
-                []
-            ]
+            "en": [],
+            "fr": []
         },
         "departmental_results_reports": {
             "en": [],
@@ -123,5 +103,4 @@
             "fr": []
         }
     }
-        
 }
