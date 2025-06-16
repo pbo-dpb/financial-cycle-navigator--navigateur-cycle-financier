@@ -1,8 +1,6 @@
 import { defineCustomElement, h, createApp, getCurrentInstance } from 'vue'
 import stl from './index.css?inline'
 import { createPinia } from 'pinia'
-import FloatingVue from 'floating-vue'
-import 'floating-vue/dist/style.css'
 
 const pinia = createPinia()
 
@@ -19,7 +17,6 @@ customElements.define('pbotool-financialcyclenavigator', defineCustomElement({
     setup() {
         const app = createApp()
         app.use(pinia)
-        app.use(FloatingVue)
 
         plugins.forEach(app.use)
         const inst = getCurrentInstance()
