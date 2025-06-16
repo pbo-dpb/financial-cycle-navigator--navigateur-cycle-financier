@@ -30,7 +30,7 @@ const description = computed(() => {
 
     <div class="lg:flex flex-col gap-2 items-center p-4">
 
-        <div class=" p-4 rounded bg-teal-800 text-white  flex flex-col gap-4 w-full">
+        <div class=" p-4 rounded-sm bg-teal-800 text-white  flex flex-col gap-4 w-full">
 
 
             <ul v-if="event.part_of_estimates_process || event.previous_spending"

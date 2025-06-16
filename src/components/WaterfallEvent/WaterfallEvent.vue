@@ -31,10 +31,10 @@ const open = ref(false);
 </script>
 <template>
     <details
-        class="group border-l-4 border-transparent open:border-teal-500 pl-2 open:bg-teal-50 dark:open:bg-teal-950 -ml-2 open:my-2 transition-all open:shadow"
+        class="group border-l-4 border-solid border-transparent open:border-teal-500 pl-2 open:bg-teal-50 dark:open:bg-teal-950 -ml-2 open:my-2 transition-all open:shadow-sm"
         @toggle="(event) => open = event.target.open">
         <summary
-            class="list-none lg:grid grid-cols-3 gap-x-4  hover:bg-sky-50 dark:hover:bg-sky-900 group-open:hover:bg-transparent dark:hover:group-open:bg-transparent transition-colors duration-100  cursor-pointer select-none"
+            class="list-none lg:grid grid-cols-3 gap-x-4  hover:bg-sky-50 dark:hover:bg-sky-900 hover:group-open:bg-transparent dark:group-open:hover:bg-transparent transition-colors duration-100  cursor-pointer select-none"
             @click="open = !open">
             <div class="flex flex-row gap-4 py-4">
                 <div class="flex flex-col gap-1 lg:text-right w-full">

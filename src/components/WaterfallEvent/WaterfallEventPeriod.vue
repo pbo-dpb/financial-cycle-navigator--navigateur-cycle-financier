@@ -74,7 +74,7 @@ const render = () => {
         }
     }, [
         h(CycleBar, {
-            class: [(props.event.end ? "w-full h-4" : "size-4"), "group-hover:drop-shadow-lg", "group-hover:group-open:drop-shadow-none", "transition-shadow"],
+            class: [(props.event.end ? "w-full h-4" : "size-4"), "group-hover:drop-shadow-lg", "group-open:group-hover:drop-shadow-none", "transition-shadow"],
             color: props.event.color,
             upcoming: props.event.govdocs[language.value].length,
             width: getBarWidth()

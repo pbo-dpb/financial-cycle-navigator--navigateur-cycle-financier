@@ -1,6 +1,35 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+
+@plugin '@tailwindcss/typography';
+
+@theme {
+  --grid-template-columns-13: repeat(13, minmax(0, 1fr));
+
+  --grid-column-start-13: 13;
+
+  --grid-column-end-13: 13;
+  --grid-column-end-14: 14;
+
+  --grid-column-span-13: span 13 / span 13;
+}
+
+/*
+  The default border color has changed to `currentcolor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentcolor);
+  }
+}
 
 details>summary::marker,
 /* Latest Chrome, Edge, Firefox */

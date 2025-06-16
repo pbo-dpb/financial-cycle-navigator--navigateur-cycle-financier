@@ -1,7 +1,7 @@
 <template>
   <DebugBar v-if="debug"></DebugBar>
 
-  <div class="flex flex-col lg:grid grid-cols-3 gap-x-4 border-l-4 border-transparent pl-2 -ml-2">
+  <div class="flex flex-col lg:grid grid-cols-3 gap-x-4 border-l-4 border-solid border-transparent pl-2 -ml-2">
 
     <div class="col-span-3 mb-4">
       <CollapsibleIntro></CollapsibleIntro>

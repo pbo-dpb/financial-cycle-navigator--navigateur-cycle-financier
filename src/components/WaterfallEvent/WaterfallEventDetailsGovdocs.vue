@@ -28,18 +28,18 @@ const props = defineProps({
 
 </script>
 <template>
-    <div v-for="govdoc in govdocs" class="p-2 bg-teal-900 rounded flex flex-col gap-2">
+    <div v-for="govdoc in govdocs" class="p-2 bg-teal-900 rounded-sm flex flex-col gap-2">
         <div class="font-semibold flex flex-row items-center gap-2">
             <img :src="govGlyph" class="size-4" alt="" style=" filter: grayscale(1) brightness(3);">{{
                 strings.government_document_label
             }}
         </div>
 
-        <div class="border-l-2 border-teal-700 pl-2">
+        <div class="border-l-2 border-solid border-teal-700 pl-2">
             <a :href="govdoc" target="_blank" role="link" tabindex="0"
                 class="flex flex-row gap-2 h-full cursor-pointer items-center" @click="openGovdoc(govdoc)">
 
-                <div class="w-16  shadow-sm h-20 flex bg-gradient-to-br from-teal-600 to-teal-800 p-2">
+                <div class="w-16  shadow-xs h-20 flex bg-linear-to-br from-teal-600 to-teal-800 p-2">
                     <img :src="govLogo" alt="" class="place-center">
                 </div>
 

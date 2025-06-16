@@ -53,7 +53,7 @@ const openFincyable = (e) => {
 }
 </script>
 <template>
-    <div class="p-2 bg-teal-900 rounded">
+    <div class="p-2 bg-teal-900 rounded-sm">
         <LoadingIndicator v-if="fincies === null" class="size-8 text-white"></LoadingIndicator>
         <div v-else class="flex flex-col gap-2">
             <div class="font-semibold flex flex-row items-center gap-2">
@@ -63,12 +63,12 @@ const openFincyable = (e) => {
                 }}
             </div>
 
-            <div class="border-l-2 border-teal-700 pl-2">
+            <div class="border-l-2 border-solid border-teal-700 pl-2">
                 <figure role="link" tabindex="0" v-if="fincyable" class="flex flex-row gap-2 h-full cursor-pointer"
                     @click="openFincyable">
 
                     <div v-if="fincyable.coverpages && fincyable.coverpages.distribution[language].small"
-                        class="w-16  shadow-sm h-fit">
+                        class="w-16  shadow-xs h-fit">
                         <img :src="fincyable.coverpages.distribution[language].small" alt="">
                     </div>
                     <div class="w-full flex flex-col gap-0.5 justify-center">

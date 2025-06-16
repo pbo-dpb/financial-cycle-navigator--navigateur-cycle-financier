@@ -1,9 +1,9 @@
 <template>
 
-    <div class="group border-l-4 border-transparent  lg:pl-2  lg:-ml-2">
+    <div class="group border-l-4 border-solid border-transparent  lg:pl-2  lg:-ml-2">
         <div class="lg:grid grid-cols-3 gap-x-4">
             <div
-                class="border-b-2 lg:border-0 lg:py-2 lg:-mx-2 lg:ml-0 lg:px-2 text-lg lg:text-sm font-semibold text-slate-600 flex flex-row items-center justify-between gap-0.5 lg:bg-gradient-to-br from-gray-50 to-slate-50 dark:from-gray-900 dark:to-slate-900 dark:text-slate-400">
+                class="border-b-2 border-solid lg:border-0 lg:py-2 lg:-mx-2 lg:ml-0 lg:px-2 text-lg lg:text-sm font-semibold text-slate-600 flex flex-row items-center justify-between gap-0.5 lg:bg-linear-to-br from-gray-50 to-slate-50 dark:from-gray-900 dark:to-slate-900 dark:text-slate-400">
 
 
                 <slot></slot>

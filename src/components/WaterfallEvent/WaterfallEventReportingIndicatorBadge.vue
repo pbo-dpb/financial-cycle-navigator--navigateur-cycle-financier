@@ -22,7 +22,7 @@ const props = defineProps({
 });
 </script>
 <template>
-    <div class="flex flex-row gap-0.5 items-center shrink-0 border border-teal-500 rounded p-0.5 text-teal-600"
+    <div class="flex flex-row gap-0.5 items-center shrink-0 border border-solid border-teal-500 rounded-sm p-0.5 text-teal-600"
         :data-tooltip="strings[`readyness_${type}_${upcoming ? 'upcoming' : 'released'}`]">
         <img :src="type === 'gov' ? govGlyph : pboGlyph" class="size-4 shrink-0" alt="">
         <ClockIcon v-if="upcoming" class="size-4 shrink-0"></ClockIcon>
