@@ -34,7 +34,7 @@ const fincyable = computed(() => {
 
     return {
         ...fincyable,
-        type: fincy.value.blog ? 'blog' : fincy.value.publication.type,
+        type: fincy.value.blog ? 'BLOG' : fincy.value.publication.type,
         release_date: new Date(fincyable.release_date),
         abstract: abstract ? marked(abstract) : null,
         permalink: fincyable.permalinks[language.value].website

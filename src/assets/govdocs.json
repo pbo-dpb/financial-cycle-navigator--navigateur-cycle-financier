@@ -79,8 +79,12 @@
             "fr": []
         },
         "supplementary_estimates_a": {
-            "en": [],
-            "fr": []
+            "en": [
+                "https://www.canada.ca/en/treasury-board-secretariat/services/planned-government-spending/supplementary-estimates.html"
+            ],
+            "fr": [
+                "https://www.canada.ca/fr/secretariat-conseil-tresor/services/depenses-prevues/budgets-supplementaires.html"
+            ]
         },
         "fall_economic_statement": {
             "en": [],

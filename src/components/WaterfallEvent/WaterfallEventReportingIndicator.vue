@@ -17,7 +17,7 @@ const fincy = computed(() => {
 
     if (!fincy) return null;
 
-    if (!fincy.publication ?? null) return false;
+    if (!(fincy.publication ?? null) && !(fincy.blog ?? null)) return false;
 
     return fincy;
 });
