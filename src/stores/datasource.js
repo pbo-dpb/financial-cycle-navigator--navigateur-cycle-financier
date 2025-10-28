@@ -54,7 +54,7 @@ export default defineStore('datasource', {
         async fetchEvents() {
 
             if (this.fyevents.length === 0) {
-                const response = await fetch(fyeventsUrl)//await fetch('https://pfcn-ecfp.pbo-dpb.ca/fyevents.json')//TODO: replace with production URL
+                const response = await fetch('https://pfcn-ecfp.pbo-dpb.ca/fyevents.json')
                 if (!response.ok) {
                     throw new Error(`Response status: ${response.status}`);
                 }
