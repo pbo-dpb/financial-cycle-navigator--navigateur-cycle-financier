@@ -43,7 +43,7 @@ export default defineStore('datasource', {
     actions: {
         async fetchFincies() {
 
-            const response = await fetch('https://rest-393962616e6b.pbo-dpb.ca/fincies')
+            const response = await fetch(`https://rest-393962616e6b.pbo-dpb.ca/fincies/${this.currentFyStartYear}`)
             if (!response.ok) {
                 throw new Error(`Response status: ${response.status}`);
             }
@@ -76,8 +76,6 @@ export default defineStore('datasource', {
                     details: fyevent.details
 
                 }
-
-
 
                 // Use previous years details if none are available
                 let counter = 1;

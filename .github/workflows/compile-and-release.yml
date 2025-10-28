@@ -22,6 +22,7 @@ jobs:
             dist.zip
       - run: mkdir s3
       - run: cp src/assets/govdocs.json s3/govdocs.json
+      - run: cp src/assets/fyevents.json s3/fyevents.json
       - uses: shallwefootball/s3-upload-action@master
         with:
           aws_key_id: ${{ secrets.AWS_KEY_ID }}

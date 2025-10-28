@@ -94,6 +94,7 @@ export default {
     },
     currentFy() {
       this.fetchEvents();
+      this.fetchFincies();
     }
   },
   components: {
