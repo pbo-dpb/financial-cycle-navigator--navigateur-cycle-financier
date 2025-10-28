@@ -143,8 +143,12 @@
             },
             {
                 "govdocs": {
-                    "en": "https://www.justice.gc.ca/eng/rp-pr/cp-pm/dpr-rr/2023_2024/index.html",
-                    "fr": "https://www.justice.gc.ca/fra/pr-rp/pm-cp/rr-dpr/2023_2024/index.html"
+                    "en": [
+                        "https://www.justice.gc.ca/eng/rp-pr/cp-pm/dpr-rr/2023_2024/index.html"
+                    ],
+                    "fr": [
+                        "https://www.justice.gc.ca/fra/pr-rp/pm-cp/rr-dpr/2023_2024/index.html"
+                    ]
                 },
                 "details": {
                     "id": "departmental_results_reports",
@@ -163,8 +167,12 @@
             },
             {
                 "govdocs": {
-                    "en": "https://www.canada.ca/en/public-services-procurement/services/payments-accounting/public-accounts/2024.html",
-                    "fr": "https://www.canada.ca/fr/services-publics-approvisionnement/services/paiements-comptabilite/comptes-publics/2024.html"
+                    "en": [
+                        "https://www.canada.ca/en/public-services-procurement/services/payments-accounting/public-accounts/2024.html"
+                    ],
+                    "fr": [
+                        "https://www.canada.ca/fr/services-publics-approvisionnement/services/paiements-comptabilite/comptes-publics/2024.html"
+                    ]
                 },
                 "details": {
                     "id": "public_accounts",
@@ -182,8 +190,12 @@
             },
             {
                 "govdocs": {
-                    "en": "https://www.canada.ca/en/treasury-board-secretariat/services/planned-government-spending/supplementary-estimates/supplementary-estimates-c-2023-24.html",
-                    "fr": "https://www.canada.ca/fr/secretariat-conseil-tresor/services/depenses-prevues/budgets-supplementaires/budget-supplementaire-depenses-c-2023-2024.html"
+                    "en": [
+                        "https://www.canada.ca/en/treasury-board-secretariat/services/planned-government-spending/supplementary-estimates/supplementary-estimates-c-2023-24.html"
+                    ],
+                    "fr": [
+                        "https://www.canada.ca/fr/secretariat-conseil-tresor/services/depenses-prevues/budgets-supplementaires/budget-supplementaire-depenses-c-2023-2024.html"
+                    ]
                 },
                 "details": {
                     "id": "supplementary_estimates_c",

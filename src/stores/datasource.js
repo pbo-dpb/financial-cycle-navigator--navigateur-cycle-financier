@@ -4,7 +4,6 @@ import fr from '../assets/strings/fr.json'
 
 import CycleEvent from '../models/CycleEvent'
 import Fincy from '../models/Fincy'
-import fyeventsUrl from '../assets/fyevents.json?url'
 
 export default defineStore('datasource', {
     state: () => ({
