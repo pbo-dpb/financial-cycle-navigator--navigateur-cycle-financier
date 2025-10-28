@@ -9,16 +9,15 @@
   },
   "dependencies": {
     "@heroicons/vue": "^2.2",
-    "marked": "^15.0.4",
+    "@tailwindcss/vite": "^4.1.16",
+    "marked": "^16.4.1",
     "pinia": "^3.0.3",
-    "vue": "^3.5.13"
+    "vue": "^3.5.22"
   },
   "devDependencies": {
-    "@tailwindcss/postcss": "^4.1.10",
-    "@tailwindcss/typography": "^0.5.15",
-    "@vitejs/plugin-vue": "^5.2.1",
-    "postcss": "^8.4.49",
-    "tailwindcss": "^4.1.10",
-    "vite": "^6.0.5"
+    "@tailwindcss/typography": "^0.5.19",
+    "@vitejs/plugin-vue": "^6.0.1",
+    "tailwindcss": "^4.1.16",
+    "vite": "^7.1.12"
   }
 }
