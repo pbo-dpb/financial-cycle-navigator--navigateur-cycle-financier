@@ -27,5 +27,6 @@
     "readyness_gov_upcoming": "Upcoming Government Document",
     "readyness_pbo_upcoming": "Upcoming PBO Analysis",
     "readyness_pbo_released": "PBO Analysis Published",
-    "readyness_gov_released": "Government Document Published"
+    "readyness_gov_released": "Government Document Published",
+    "notes_label": "Note"
 }

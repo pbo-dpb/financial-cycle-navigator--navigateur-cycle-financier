@@ -27,5 +27,6 @@
     "readyness_gov_upcoming": "Document du gouvernement à venir",
     "readyness_pbo_upcoming": "Analyse du DPB à venir",
     "readyness_pbo_released": "Analyse du DPB publiée",
-    "readyness_gov_released": "Document du gouvernement publié"
+    "readyness_gov_released": "Document du gouvernement publié",
+    "notes_label": "Note"
 }

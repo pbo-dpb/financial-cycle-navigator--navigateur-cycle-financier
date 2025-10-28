@@ -15,6 +15,7 @@ export default defineStore('datasource', {
         highlightEvent: null,
         fincies: null,
         fyevents: [],
+        notes: []
     }),
 
     getters: {
@@ -66,6 +67,8 @@ export default defineStore('datasource', {
             // If current FY was not added yet, return last available FY
             if (!currentFyInfo) {
                 currentFyInfo = this.fyevents[this.fyevents.length - 1];
+            } else {
+                this.notes = currentFyInfo.notes || [];
             }
 
             this.events = currentFyInfo.events.map((fyevent) => {

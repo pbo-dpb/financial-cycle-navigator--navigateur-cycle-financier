@@ -40,6 +40,16 @@
     :is-last="index === events.length - 1">
   </WaterfallEvent>
 
+  <aside v-if="notes.length > 0"
+    class="mt-8 flex flex-col grid-cols-3 gap-1 border-l-2 border-gray-200 dark:border-gray-700 pl-2 border-solid">
+    <div class="text-sm font-semibold">{{ `${strings.notes_label}${notes.length > 1 ? 's' : ''}` }}</div>
+    <component :is="notes.length > 1 ? 'ul' : 'div'"
+      class="prose dark:prose-invert max-w-none prose-a:text-sky-800 prose-a:dark:text-sky-200 prose-sm prose-p:my-0 ">
+      <component :is="notes.length > 1 ? 'li' : 'p'" v-for="(note, index) in notes" :key="index"
+        v-html="htmlNotes[index]"></component>
+    </component>
+  </aside>
+
 </template>
 
 <script>
@@ -53,6 +63,7 @@ import WaterfallEvent from './components/WaterfallEvent/WaterfallEvent.vue'
 import CollapsibleIntro from './components/CollapsibleIntro.vue'
 import CurrentFiscalYearIndicator from './components/CurrentFiscalYearIndicator.vue'
 import WaterfallEventGroupLabel from './components/WaterfallEventGroupLabel.vue'
+import { marked } from 'marked';
 
 const DebugBar = defineAsyncComponent(() =>
   import("./components/DebugBar.vue")
@@ -62,7 +73,10 @@ export default {
   computed: {
 
     ...mapWritableState(Datasource, ['language', 'highlightEvent']),
-    ...mapState(Datasource, ['strings', 'events', 'currentFy']),
+    ...mapState(Datasource, ['strings', 'events', 'currentFy', 'notes']),
+    htmlNotes() {
+      return this.notes.map(note => marked(note[this.language]));
+    },
     debug() {
       return this.$root.debug;
     },

@@ -204,6 +204,12 @@
     },
     {
         "year": "2526",
+        "notes": [
+            {
+                "en": "[On October 6, 2025 the Government of Canada changed its reporting cycle to publish a Budget in the fall](https://www.canada.ca/en/department-finance/news/2025/10/government-of-canada-modernizes-its-budgeting-approach-to-deliver-generational-investments.html), instead of the spring, and an economic and fiscal outlook in the spring, instead of the fall. PBO assumes that the approximate month of publication of these documents will have a corresponding change going forwards.  ",
+                "fr": " [Le 6 octobre 2025, le gouvernement du Canada a modifié son cycle de publication pour présenter le budget à l’automne](https://www.canada.ca/fr/ministere-finances/nouvelles/2025/10/le-gouvernement-du-canada-modernise-son-approche-budgetaire-afin-de-realiser-des-investissements-generationnels.html) plutôt qu’au printemps, et les perspectives économiques et budgétaires au printemps plutôt qu’à l’automne. Le DPB suppose que le mois approximatif de publication de ces documents changera en conséquence à l’avenir."
+            }
+        ],
         "events": [
             {
                 "govdocs": {
@@ -256,17 +262,17 @@
                     "fr": []
                 },
                 "details": {
-                    "id": "budget",
-                    "name_en": "The Budget",
-                    "name_fr": "Le budget",
-                    "short_description_en": "Tabled in the spring, typically March or April.",
-                    "short_description_fr": "Déposé au printemps, généralement en mars ou en avril.",
-                    "long_description_en": "The Budget presents the Government’s spending priorities and expected revenues for a given fiscal year. It also includes economic and fiscal projections.",
-                    "long_description_fr": "Le budget décrit les priorités du gouvernement en matière de dépenses et les recettes prévues pour un exercice donné; il renferme aussi des prévisions économiques et financières.",
+                    "id": "economic_and_fiscal_update",
+                    "name_en": "Economic and Fiscal Update",
+                    "name_fr": "Mise à jour économique et financière",
+                    "color": "#f59e0b",
+                    "short_description_en": "Tabled in the spring.",
+                    "short_description_fr": "Déposé au printemps.",
+                    "long_description_en": "The Economic and Fiscal Update provides an update to the Government’s spending plans for a given fiscal year. It also includes updated economic and fiscal projections.",
+                    "long_description_fr": "La Mise à jour économique et financière fait le point par rapport aux plans de dépense du gouvernement pour l’exercice visé; il renferme aussi des prévisions économiques et financières actualisées.",
                     "start": "03-01",
-                    "end": "04-30",
-                    "color": "#16a34a",
-                    "fincy_document_type": "budget_key_issues"
+                    "end": "05-31",
+                    "fincy_document_type": "economic_and_fiscal_update"
                 }
             },
             {
@@ -299,17 +305,17 @@
                     "fr": []
                 },
                 "details": {
-                    "id": "fall_economic_statement",
-                    "name_en": "Fall Economic Statement",
-                    "name_fr": "Énoncé économique de l'automne",
-                    "color": "#f59e0b",
-                    "short_description_en": "Tabled in the fall, typically November.",
-                    "short_description_fr": "Déposé à l'automne, généralement en novembre.",
-                    "long_description_en": "The Fall Economic Statement, which succeeds the Budget, provides an update to the Government’s spending plans for a given fiscal year. It also includes updated economic and fiscal projections.",
-                    "long_description_fr": "L’Énoncé économique de l’automne, qui vient après le budget, fait le point par rapport aux plans de dépense du gouvernement pour l’exercice visé; il renferme aussi des prévisions économiques et financières actualisées.",
+                    "id": "budget",
+                    "name_en": "The Budget",
+                    "name_fr": "Le budget",
+                    "short_description_en": "Tabled in the Fall.",
+                    "short_description_fr": "Déposé à l'automne.",
+                    "long_description_en": "The Budget presents the Government’s spending priorities and expected revenues. It also includes economic and fiscal projections.",
+                    "long_description_fr": "Le budget décrit les priorités du gouvernement en matière de dépenses et les recettes prévues; il renferme aussi des prévisions économiques et financières.",
                     "start": "10-01",
-                    "end": "12-31",
-                    "fincy_document_type": "fall_economic_statement"
+                    "end": "11-30",
+                    "color": "#16a34a",
+                    "fincy_document_type": "budget_key_issues"
                 }
             },
             {
