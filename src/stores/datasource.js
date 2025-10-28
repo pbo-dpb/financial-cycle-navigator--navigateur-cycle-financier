@@ -2,9 +2,9 @@ import { defineStore } from 'pinia'
 import en from '../assets/strings/en.json'
 import fr from '../assets/strings/fr.json'
 
-import payload from '../assets/payload.json'
 import CycleEvent from '../models/CycleEvent'
 import Fincy from '../models/Fincy'
+import fyeventsUrl from '../assets/fyevents.json?url'
 
 export default defineStore('datasource', {
     state: () => ({
@@ -14,7 +14,7 @@ export default defineStore('datasource', {
         currentDate: (new Date()).toISOString().split('T')[0],
         highlightEvent: null,
         fincies: null,
-        govdocs: null,
+        fyevents: [],
     }),
 
     getters: {
@@ -52,18 +52,47 @@ export default defineStore('datasource', {
         },
         async fetchEvents() {
 
-            if (!this.govdocs) {
-                const response = await fetch('https://pfcn-ecfp.pbo-dpb.ca/govdocs.json')
+            if (this.fyevents.length === 0) {
+                const response = await fetch(fyeventsUrl)//await fetch('https://pfcn-ecfp.pbo-dpb.ca/fyevents.json')//TODO: replace with production URL
                 if (!response.ok) {
                     throw new Error(`Response status: ${response.status}`);
                 }
-                const govdocs = await response.json();
-                this.govdocs = govdocs;
+                const fyevents = await response.json();
+                this.fyevents = fyevents;
             }
 
-            const currentFyGovdocs = this.govdocs[this.currentFy];
+            let currentFyInfo = this.fyevents.find(event => event.year === this.currentFy);
 
-            this.events = payload.events.map((event) => new CycleEvent(event, currentFyGovdocs));
+            // If current FY was not added yet, return last available FY
+            if (!currentFyInfo) {
+                currentFyInfo = this.fyevents[this.fyevents.length - 1];
+            }
+
+            this.events = currentFyInfo.events.map((fyevent) => {
+
+                let fyEventObject = {
+
+                    govdocs: currentFyInfo.year === this.currentFy ? fyevent.govdocs : [],
+                    details: fyevent.details
+
+                }
+
+
+
+                // Use previous years details if none are available
+                let counter = 1;
+                while (!fyEventObject.details) {
+                    const previousFyInfo = this.fyevents[this.fyevents.length - counter];
+                    fyEventObject.details = previousFyInfo.events.find(e => e.id === fyevent.id)?.details;
+                    counter++;
+                }
+
+
+
+
+                return fyEventObject;
+
+            }).map((event) => new CycleEvent(event));
         }
     },
 

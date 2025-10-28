@@ -1,0 +1,396 @@
+[
+    {
+        "year": "2425",
+        "events": [
+            {
+                "govdocs": {
+                    "en": [
+                        "https://www.canada.ca/en/treasury-board-secretariat/services/planned-government-spending/government-expenditure-plan-main-estimates/2024-25-estimates.html"
+                    ],
+                    "fr": [
+                        "https://www.canada.ca/fr/secretariat-conseil-tresor/services/depenses-prevues/plan-depenses-budget-principal/2024-25-budget-depenses.html"
+                    ]
+                },
+                "details": {
+                    "id": "main_estimates",
+                    "name_en": "Main Estimates",
+                    "name_fr": "Budget principal des dépenses",
+                    "part_of_estimates_process": true,
+                    "color": "#0e7490",
+                    "short_description_en": "Tabled prior to start of the fiscal year, on or before March 1.",
+                    "short_description_fr": "Déposé avant le début de l’exercice financier, au plus tard le 1er mars.",
+                    "long_description_en": "The Main Estimates are the first Estimates for a given fiscal year and include the majority of the Government’s planned spending for the upcoming fiscal year.",
+                    "long_description_fr": "Le Budget principal des dépenses est le premier document budgétaire présenté pour un exercice donné; il renferme la majorité des dépenses que le gouvernement projette de faire durant l’exercice à venir.",
+                    "start": "03-01",
+                    "fincy_document_type": "main_estimates"
+                }
+            },
+            {
+                "govdocs": {
+                    "en": [
+                        "https://www.canada.ca/en/treasury-board-secretariat/services/planned-government-spending/reports-plans-priorities/2024-25-departmental-plans.html"
+                    ],
+                    "fr": [
+                        "https://www.canada.ca/fr/secretariat-conseil-tresor/services/depenses-prevues/rapports-plans-priorites/plans-ministeriels-2024-2025.html"
+                    ]
+                },
+                "details": {
+                    "id": "departmental_plans",
+                    "name_en": "Departmental Plans",
+                    "name_fr": "Plans ministériels",
+                    "color": "#c026d3",
+                    "part_of_estimates_process": true,
+                    "short_description_en": "Tabled alongside Main Estimates or shortly after.",
+                    "short_description_fr": "Documents déposés en même temps que le Budget principal des dépenses ou peu après.",
+                    "long_description_en": "Departmental Plans provide forward-looking information on departmental priorities, results and resources required over a three-year period. They provide additional context to the spending information included in the Main Estimates.",
+                    "long_description_fr": "Les plans ministériels donnent de l’information sur les priorités des ministères, les résultats que ceux-ci comptent obtenir et les ressources dont ils pensent avoir besoin durant les trois années à venir; ils apportent un complément contextuel aux données financières du Budget principal des dépenses.",
+                    "start": "03-02"
+                }
+            },
+            {
+                "govdocs": {
+                    "en": [
+                        "https://budget.canada.ca/2024/home-accueil-en.html"
+                    ],
+                    "fr": [
+                        "https://budget.canada.ca/2024/home-accueil-fr.html"
+                    ]
+                },
+                "details": {
+                    "id": "budget",
+                    "name_en": "The Budget",
+                    "name_fr": "Le budget",
+                    "short_description_en": "Tabled in the spring, typically March or April.",
+                    "short_description_fr": "Déposé au printemps, généralement en mars ou en avril.",
+                    "long_description_en": "The Budget presents the Government’s spending priorities and expected revenues for a given fiscal year. It also includes economic and fiscal projections.",
+                    "long_description_fr": "Le budget décrit les priorités du gouvernement en matière de dépenses et les recettes prévues pour un exercice donné; il renferme aussi des prévisions économiques et financières.",
+                    "start": "03-01",
+                    "end": "04-30",
+                    "color": "#16a34a",
+                    "fincy_document_type": "budget_key_issues"
+                }
+            },
+            {
+                "govdocs": {
+                    "en": [
+                        "https://www.canada.ca/en/treasury-board-secretariat/services/planned-government-spending/supplementary-estimates/supplementary-estimates-a-2024-25.html"
+                    ],
+                    "fr": [
+                        "https://www.canada.ca/fr/secretariat-conseil-tresor/services/depenses-prevues/budgets-supplementaires/budget-supplementaire-depenses-a-2024-2025.html"
+                    ]
+                },
+                "details": {
+                    "id": "supplementary_estimates_a",
+                    "name_en": "Supplementary Estimates (A)",
+                    "name_fr": "Budgets supplémentaires des dépenses (A)",
+                    "part_of_estimates_process": true,
+                    "color": "#3A85CF",
+                    "short_description_en": "Tabled in the spring, typically May. Supply period ends June 23.",
+                    "short_description_fr": "Déposé au printemps (généralement en mai) pour la période de crédits se terminant le 23 juin",
+                    "long_description_en": "The Supplementary Estimates reflect additional funding requests for items that were not fully developed or anticipated in earlier Estimates in a given fiscal year.",
+                    "long_description_fr": "Le Budget supplémentaire des dépenses présente des demandes de financement supplémentaires pour combler des besoins qui n’étaient pas suffisamment élaborés ou que l’on n’avait pas prévus dans les documents budgétaires précédents pour l’exercice visé.",
+                    "start": "05-01",
+                    "end": "05-31",
+                    "fincy_document_type": "supplementary_estimates_a"
+                }
+            },
+            {
+                "govdocs": {
+                    "en": [
+                        "https://www.budget.canada.ca/update-miseajour/2024/home-accueil-en.html"
+                    ],
+                    "fr": [
+                        "https://www.budget.canada.ca/update-miseajour/2024/home-accueil-fr.html"
+                    ]
+                },
+                "details": {
+                    "id": "fall_economic_statement",
+                    "name_en": "Fall Economic Statement",
+                    "name_fr": "Énoncé économique de l'automne",
+                    "color": "#f59e0b",
+                    "short_description_en": "Tabled in the fall, typically November.",
+                    "short_description_fr": "Déposé à l'automne, généralement en novembre.",
+                    "long_description_en": "The Fall Economic Statement, which succeeds the Budget, provides an update to the Government’s spending plans for a given fiscal year. It also includes updated economic and fiscal projections.",
+                    "long_description_fr": "L’Énoncé économique de l’automne, qui vient après le budget, fait le point par rapport aux plans de dépense du gouvernement pour l’exercice visé; il renferme aussi des prévisions économiques et financières actualisées.",
+                    "start": "10-01",
+                    "end": "12-31",
+                    "fincy_document_type": "fall_economic_statement"
+                }
+            },
+            {
+                "govdocs": {
+                    "en": [
+                        "https://www.canada.ca/en/treasury-board-secretariat/services/planned-government-spending/supplementary-estimates/supplementary-estimates-b-2024-25.html"
+                    ],
+                    "fr": [
+                        "https://www.canada.ca/fr/secretariat-conseil-tresor/services/depenses-prevues/budgets-supplementaires/budget-supplementaire-depenses-b-2024-2025.html"
+                    ]
+                },
+                "details": {
+                    "id": "supplementary_estimates_b",
+                    "name_en": "Supplementary Estimates (B)",
+                    "name_fr": "Budgets supplémentaires des dépenses (B)",
+                    "part_of_estimates_process": true,
+                    "color": "#245C94",
+                    "short_description_en": "Tabled late fall, typically November. Supply period ends December 10.",
+                    "short_description_fr": "Déposé à la fin de l’automne (généralement en novembre) pour la période de crédits se terminant le 10 décembre.",
+                    "long_description_en": "The Supplementary Estimates reflect additional funding requests for items that were not fully developed or anticipated in earlier Estimates in a given fiscal year.",
+                    "long_description_fr": "Les budgets supplémentaires des dépenses reflètent les demandes de financement supplémentaires pour des éléments qui n'ont pas été pleinement développés ou anticipés dans les budgets des dépenses antérieurs d'un exercice financier donné.",
+                    "start": "11-01",
+                    "end": "11-30",
+                    "fincy_document_type": "supplementary_estimates_b"
+                }
+            },
+            {
+                "govdocs": {
+                    "en": "https://www.justice.gc.ca/eng/rp-pr/cp-pm/dpr-rr/2023_2024/index.html",
+                    "fr": "https://www.justice.gc.ca/fra/pr-rp/pm-cp/rr-dpr/2023_2024/index.html"
+                },
+                "details": {
+                    "id": "departmental_results_reports",
+                    "name_en": "Departmental Results Reports",
+                    "name_fr": "Rapports sur les résultats ministériels",
+                    "part_of_estimates_process": true,
+                    "previous_spending": true,
+                    "color": "#94a3b8",
+                    "short_description_en": "Tabled in the fall.",
+                    "short_description_fr": "Documents déposés à l’automne.",
+                    "long_description_en": "The Departmental Results Reports provide actual results achieved against priorities listed in Departmental Plans for the most recently completed fiscal year.",
+                    "long_description_fr": "Les rapports sur les résultats ministériels font état des résultats réels par rapport aux priorités énoncées dans les plans ministériels pour l’exercice complet le plus récent.",
+                    "start": "10-01",
+                    "end": "12-31"
+                }
+            },
+            {
+                "govdocs": {
+                    "en": "https://www.canada.ca/en/public-services-procurement/services/payments-accounting/public-accounts/2024.html",
+                    "fr": "https://www.canada.ca/fr/services-publics-approvisionnement/services/paiements-comptabilite/comptes-publics/2024.html"
+                },
+                "details": {
+                    "id": "public_accounts",
+                    "name_en": "Public Accounts",
+                    "name_fr": "Comptes publics",
+                    "previous_spending": true,
+                    "color": "#94a3b8",
+                    "short_description_en": "Tabled by December 31, typically October.",
+                    "short_description_fr": "Documents déposés généralement en octobre, mais au plus tard le 31 décembre.",
+                    "long_description_en": "The Public Accounts include audited consolidated financial statements of the Government of Canada for the previous fiscal year. It also includes supplementary financial information from departments and other reporting entities. ",
+                    "long_description_fr": "Les comptes publics renferment les états financiers consolidés vérifiés du gouvernement du Canada pour l’exercice précédent; ils contiennent aussi de l’information financière supplémentaire fournie par les ministères et les autres entités comptables.",
+                    "start": "10-01",
+                    "end": "12-31"
+                }
+            },
+            {
+                "govdocs": {
+                    "en": [],
+                    "fr": []
+                },
+                "details": {
+                    "id": "supplementary_estimates_c",
+                    "name_en": "Supplementary Estimates (C)",
+                    "name_fr": "Budgets supplémentaires des dépenses (C)",
+                    "color": "#dc2626",
+                    "part_of_estimates_process": true,
+                    "short_description_en": "Tabled in the winter, typically February. Supply period ends March 26.",
+                    "short_description_fr": "Déposé l’hiver (généralement en février) pour la période de crédits se terminant le 26 mars.",
+                    "long_description_en": "The Supplementary Estimates reflect additional funding requests for items that were not fully developed or anticipated in earlier Estimates in a given fiscal year.",
+                    "long_description_fr": "Le Budget supplémentaire des dépenses présente des demandes de financement supplémentaires pour combler des besoins qui n’étaient pas suffisamment élaborés ou que l’on n’avait pas prévus dans les documents budgétaires précédents pour l’exercice visé.",
+                    "start": "02-01",
+                    "end": "02-28",
+                    "fincy_document_type": "supplementary_estimates_c"
+                }
+            }
+        ]
+    },
+    {
+        "year": "2526",
+        "events": [
+            {
+                "govdocs": {
+                    "en": [
+                        "https://www.canada.ca/en/treasury-board-secretariat/services/planned-government-spending/government-expenditure-plan-main-estimates/2025-26-estimates.html"
+                    ],
+                    "fr": [
+                        "https://www.canada.ca/fr/secretariat-conseil-tresor/services/depenses-prevues/plan-depenses-budget-principal/2025-26-budget-depenses.html"
+                    ]
+                },
+                "details": {
+                    "id": "main_estimates",
+                    "name_en": "Main Estimates",
+                    "name_fr": "Budget principal des dépenses",
+                    "part_of_estimates_process": true,
+                    "color": "#0e7490",
+                    "short_description_en": "Tabled prior to start of the fiscal year, on or before March 1.",
+                    "short_description_fr": "Déposé avant le début de l’exercice financier, au plus tard le 1er mars.",
+                    "long_description_en": "The Main Estimates are the first Estimates for a given fiscal year and include the majority of the Government’s planned spending for the upcoming fiscal year.",
+                    "long_description_fr": "Le Budget principal des dépenses est le premier document budgétaire présenté pour un exercice donné; il renferme la majorité des dépenses que le gouvernement projette de faire durant l’exercice à venir.",
+                    "start": "03-01",
+                    "fincy_document_type": "main_estimates"
+                }
+            },
+            {
+                "govdocs": {
+                    "en": [
+                        "https://www.canada.ca/en/treasury-board-secretariat/services/planned-government-spending/reports-plans-priorities/2025-26-departmental-plans.html"
+                    ],
+                    "fr": [
+                        "https://www.canada.ca/fr/secretariat-conseil-tresor/services/depenses-prevues/rapports-plans-priorites/plans-ministeriels-2025-2026.html"
+                    ]
+                },
+                "details": {
+                    "id": "departmental_plans",
+                    "name_en": "Departmental Plans",
+                    "name_fr": "Plans ministériels",
+                    "color": "#c026d3",
+                    "part_of_estimates_process": true,
+                    "short_description_en": "Tabled alongside Main Estimates or shortly after.",
+                    "short_description_fr": "Documents déposés en même temps que le Budget principal des dépenses ou peu après.",
+                    "long_description_en": "Departmental Plans provide forward-looking information on departmental priorities, results and resources required over a three-year period. They provide additional context to the spending information included in the Main Estimates.",
+                    "long_description_fr": "Les plans ministériels donnent de l’information sur les priorités des ministères, les résultats que ceux-ci comptent obtenir et les ressources dont ils pensent avoir besoin durant les trois années à venir; ils apportent un complément contextuel aux données financières du Budget principal des dépenses.",
+                    "start": "03-02"
+                }
+            },
+            {
+                "govdocs": {
+                    "en": [],
+                    "fr": []
+                },
+                "details": {
+                    "id": "budget",
+                    "name_en": "The Budget",
+                    "name_fr": "Le budget",
+                    "short_description_en": "Tabled in the spring, typically March or April.",
+                    "short_description_fr": "Déposé au printemps, généralement en mars ou en avril.",
+                    "long_description_en": "The Budget presents the Government’s spending priorities and expected revenues for a given fiscal year. It also includes economic and fiscal projections.",
+                    "long_description_fr": "Le budget décrit les priorités du gouvernement en matière de dépenses et les recettes prévues pour un exercice donné; il renferme aussi des prévisions économiques et financières.",
+                    "start": "03-01",
+                    "end": "04-30",
+                    "color": "#16a34a",
+                    "fincy_document_type": "budget_key_issues"
+                }
+            },
+            {
+                "govdocs": {
+                    "en": [
+                        "https://www.canada.ca/en/treasury-board-secretariat/services/planned-government-spending/supplementary-estimates.html"
+                    ],
+                    "fr": [
+                        "https://www.canada.ca/fr/secretariat-conseil-tresor/services/depenses-prevues/budgets-supplementaires.html"
+                    ]
+                },
+                "details": {
+                    "id": "supplementary_estimates_a",
+                    "name_en": "Supplementary Estimates (A)",
+                    "name_fr": "Budgets supplémentaires des dépenses (A)",
+                    "part_of_estimates_process": true,
+                    "color": "#3A85CF",
+                    "short_description_en": "Tabled in the spring, typically May. Supply period ends June 23.",
+                    "short_description_fr": "Déposé au printemps (généralement en mai) pour la période de crédits se terminant le 23 juin",
+                    "long_description_en": "The Supplementary Estimates reflect additional funding requests for items that were not fully developed or anticipated in earlier Estimates in a given fiscal year.",
+                    "long_description_fr": "Le Budget supplémentaire des dépenses présente des demandes de financement supplémentaires pour combler des besoins qui n’étaient pas suffisamment élaborés ou que l’on n’avait pas prévus dans les documents budgétaires précédents pour l’exercice visé.",
+                    "start": "05-01",
+                    "end": "05-31",
+                    "fincy_document_type": "supplementary_estimates_a"
+                }
+            },
+            {
+                "govdocs": {
+                    "en": [],
+                    "fr": []
+                },
+                "details": {
+                    "id": "fall_economic_statement",
+                    "name_en": "Fall Economic Statement",
+                    "name_fr": "Énoncé économique de l'automne",
+                    "color": "#f59e0b",
+                    "short_description_en": "Tabled in the fall, typically November.",
+                    "short_description_fr": "Déposé à l'automne, généralement en novembre.",
+                    "long_description_en": "The Fall Economic Statement, which succeeds the Budget, provides an update to the Government’s spending plans for a given fiscal year. It also includes updated economic and fiscal projections.",
+                    "long_description_fr": "L’Énoncé économique de l’automne, qui vient après le budget, fait le point par rapport aux plans de dépense du gouvernement pour l’exercice visé; il renferme aussi des prévisions économiques et financières actualisées.",
+                    "start": "10-01",
+                    "end": "12-31",
+                    "fincy_document_type": "fall_economic_statement"
+                }
+            },
+            {
+                "govdocs": {
+                    "en": [],
+                    "fr": []
+                },
+                "details": {
+                    "id": "supplementary_estimates_b",
+                    "name_en": "Supplementary Estimates (B)",
+                    "name_fr": "Budgets supplémentaires des dépenses (B)",
+                    "part_of_estimates_process": true,
+                    "color": "#245C94",
+                    "short_description_en": "Tabled late fall, typically November. Supply period ends December 10.",
+                    "short_description_fr": "Déposé à la fin de l’automne (généralement en novembre) pour la période de crédits se terminant le 10 décembre.",
+                    "long_description_en": "The Supplementary Estimates reflect additional funding requests for items that were not fully developed or anticipated in earlier Estimates in a given fiscal year.",
+                    "long_description_fr": "Les budgets supplémentaires des dépenses reflètent les demandes de financement supplémentaires pour des éléments qui n'ont pas été pleinement développés ou anticipés dans les budgets des dépenses antérieurs d'un exercice financier donné.",
+                    "start": "11-01",
+                    "end": "11-30",
+                    "fincy_document_type": "supplementary_estimates_b"
+                }
+            },
+            {
+                "govdocs": {
+                    "en": [],
+                    "fr": []
+                },
+                "details": {
+                    "id": "departmental_results_reports",
+                    "name_en": "Departmental Results Reports",
+                    "name_fr": "Rapports sur les résultats ministériels",
+                    "part_of_estimates_process": true,
+                    "previous_spending": true,
+                    "color": "#94a3b8",
+                    "short_description_en": "Tabled in the fall.",
+                    "short_description_fr": "Documents déposés à l’automne.",
+                    "long_description_en": "The Departmental Results Reports provide actual results achieved against priorities listed in Departmental Plans for the most recently completed fiscal year.",
+                    "long_description_fr": "Les rapports sur les résultats ministériels font état des résultats réels par rapport aux priorités énoncées dans les plans ministériels pour l’exercice complet le plus récent.",
+                    "start": "10-01",
+                    "end": "12-31"
+                }
+            },
+            {
+                "govdocs": {
+                    "en": [],
+                    "fr": []
+                },
+                "details": {
+                    "id": "public_accounts",
+                    "name_en": "Public Accounts",
+                    "name_fr": "Comptes publics",
+                    "previous_spending": true,
+                    "color": "#94a3b8",
+                    "short_description_en": "Tabled by December 31, typically October.",
+                    "short_description_fr": "Documents déposés généralement en octobre, mais au plus tard le 31 décembre.",
+                    "long_description_en": "The Public Accounts include audited consolidated financial statements of the Government of Canada for the previous fiscal year. It also includes supplementary financial information from departments and other reporting entities. ",
+                    "long_description_fr": "Les comptes publics renferment les états financiers consolidés vérifiés du gouvernement du Canada pour l’exercice précédent; ils contiennent aussi de l’information financière supplémentaire fournie par les ministères et les autres entités comptables.",
+                    "start": "10-01",
+                    "end": "12-31"
+                }
+            },
+            {
+                "govdocs": {
+                    "en": [],
+                    "fr": []
+                },
+                "details": {
+                    "id": "supplementary_estimates_c",
+                    "name_en": "Supplementary Estimates (C)",
+                    "name_fr": "Budgets supplémentaires des dépenses (C)",
+                    "color": "#dc2626",
+                    "part_of_estimates_process": true,
+                    "short_description_en": "Tabled in the winter, typically February. Supply period ends March 26.",
+                    "short_description_fr": "Déposé l’hiver (généralement en février) pour la période de crédits se terminant le 26 mars.",
+                    "long_description_en": "The Supplementary Estimates reflect additional funding requests for items that were not fully developed or anticipated in earlier Estimates in a given fiscal year.",
+                    "long_description_fr": "Le Budget supplémentaire des dépenses présente des demandes de financement supplémentaires pour combler des besoins qui n’étaient pas suffisamment élaborés ou que l’on n’avait pas prévus dans les documents budgétaires précédents pour l’exercice visé.",
+                    "start": "02-01",
+                    "end": "02-28",
+                    "fincy_document_type": "supplementary_estimates_c"
+                }
+            }
+        ]
+    }
+]

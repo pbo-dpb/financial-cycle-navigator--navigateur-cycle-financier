@@ -1,22 +1,23 @@
 
 export default class CycleEvent {
-    constructor(obj, govdocs) {
-        obj && Object.assign(this, obj);
+    constructor(obj) {
+        obj && Object.assign(this, obj.details);
 
 
-        this.part_of_estimates_process = obj.part_of_estimates_process || false;
+        this.part_of_estimates_process = obj.details.part_of_estimates_process || false;
 
-        this.previous_spending = obj.previous_spending || false;
+        this.previous_spending = obj.details.previous_spending || false;
 
-        this.start = new Date((new Date()).getFullYear(), parseInt(obj.start.split("-")[0]) - 1, parseInt(obj.start.split("-")[1]));
+        this.start = new Date((new Date()).getFullYear(), parseInt(obj.details.start.split("-")[0]) - 1, parseInt(obj.details.start.split("-")[1]));
 
-        this.end = obj.end ? new Date((new Date()).getFullYear(), parseInt(obj.end.split("-")[0]) - 1, parseInt(obj.end.split("-")[1])) : null;
+        this.end = obj.details.end ? new Date((new Date()).getFullYear(), parseInt(obj.details.end.split("-")[0]) - 1, parseInt(obj.details.end.split("-")[1])) : null;
 
-        this.fincy_document_type = obj.fincy_document_type || null;
+        this.fincy_document_type = obj.details.fincy_document_type || null;
+
 
         this.govdocs = {
-            "en": govdocs?.[obj.id]?.en ?? [],
-            "fr": govdocs?.[obj.id]?.fr ?? []
+            "en": obj.govdocs?.en ?? [],
+            "fr": obj.govdocs?.fr ?? []
         };
 
         if (!this.color && this.part_of_estimates_process) {
