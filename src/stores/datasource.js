@@ -71,7 +71,7 @@ export default defineStore('datasource', {
             this.events = currentFyInfo.events.map((fyevent) => {
 
                 let fyEventObject = {
-
+                    // Do not include govdocs from other fiscal years
                     govdocs: currentFyInfo.year === this.currentFy ? fyevent.govdocs : [],
                     details: fyevent.details
 
