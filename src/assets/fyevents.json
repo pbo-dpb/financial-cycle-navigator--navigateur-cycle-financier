@@ -182,8 +182,8 @@
             },
             {
                 "govdocs": {
-                    "en": [],
-                    "fr": []
+                    "en": "https://www.canada.ca/en/treasury-board-secretariat/services/planned-government-spending/supplementary-estimates/supplementary-estimates-c-2023-24.html",
+                    "fr": "https://www.canada.ca/fr/secretariat-conseil-tresor/services/depenses-prevues/budgets-supplementaires/budget-supplementaire-depenses-c-2023-2024.html"
                 },
                 "details": {
                     "id": "supplementary_estimates_c",
