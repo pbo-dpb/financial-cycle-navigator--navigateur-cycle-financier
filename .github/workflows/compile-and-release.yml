@@ -4,8 +4,8 @@ jobs:
   compile-assets-and-push-release:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
         with:
           node-version: '22'
       - run: npm ci
@@ -21,7 +21,6 @@ jobs:
           files: |
             dist.zip
       - run: mkdir s3
-      - run: cp src/assets/govdocs.json s3/govdocs.json
       - run: cp src/assets/fyevents.json s3/fyevents.json
       - uses: shallwefootball/s3-upload-action@master
         with:
