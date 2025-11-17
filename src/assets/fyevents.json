@@ -67,7 +67,7 @@
                     "start": "03-01",
                     "end": "04-30",
                     "color": "#16a34a",
-                    "fincy_document_type": "budget_key_issues"
+                    "fincy_document_type": "budget"
                 }
             },
             {
@@ -331,7 +331,7 @@
                     "start": "10-01",
                     "end": "11-30",
                     "color": "#16a34a",
-                    "fincy_document_type": "budget_key_issues"
+                    "fincy_document_type": "budget"
                 }
             },
             {
