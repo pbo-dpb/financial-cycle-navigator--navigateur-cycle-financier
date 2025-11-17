@@ -313,8 +313,12 @@
             },
             {
                 "govdocs": {
-                    "en": [],
-                    "fr": []
+                    "en": [
+                        "https://budget.canada.ca/2025/home-accueil-en.html"
+                    ],
+                    "fr": [
+                        "https://budget.canada.ca/2025/home-accueil-fr.html"
+                    ]
                 },
                 "details": {
                     "id": "budget",

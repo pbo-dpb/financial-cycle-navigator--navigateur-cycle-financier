@@ -4,6 +4,7 @@ import fr from '../assets/strings/fr.json'
 
 import CycleEvent from '../models/CycleEvent'
 import Fincy from '../models/Fincy'
+import fyEvents from '../assets/fyevents.json?url'
 
 export default defineStore('datasource', {
     state: () => ({
@@ -14,7 +15,9 @@ export default defineStore('datasource', {
         highlightEvent: null,
         fincies: null,
         fyevents: [],
-        notes: []
+        notes: [],
+        fetchingEvents: false,
+        fetchingFincies: false
     }),
 
     getters: {
@@ -43,23 +46,37 @@ export default defineStore('datasource', {
     actions: {
         async fetchFincies() {
 
+            if (this.fetchingFincies) {
+                return;
+            }
+
+            this.fetchingFincies = true;
             const response = await fetch(`https://rest-393962616e6b.pbo-dpb.ca/fincies/${this.currentFyStartYear}`)
             if (!response.ok) {
                 throw new Error(`Response status: ${response.status}`);
             }
             const json = await response.json();
             this.fincies = json.data.map(fincy => new Fincy(fincy));
+            this.fetchingFincies = false;
         },
         async fetchEvents() {
 
+            if (this.fetchingEvents) {
+                return;
+            }
+
+            this.fetchingEvents = true;
+
             if (this.fyevents.length === 0) {
-                const response = await fetch('https://pfcn-ecfp.pbo-dpb.ca/fyevents.json')
+                const response = await fetch(import.meta.env.DEV ? fyEvents : 'https://pfcn-ecfp.pbo-dpb.ca/fyevents.json')
                 if (!response.ok) {
                     throw new Error(`Response status: ${response.status}`);
                 }
                 const fyevents = await response.json();
                 this.fyevents = fyevents;
             }
+
+            this.fetchingEvents = false;
 
             let currentFyInfo = this.fyevents.find(event => event.year === this.currentFy);
 
