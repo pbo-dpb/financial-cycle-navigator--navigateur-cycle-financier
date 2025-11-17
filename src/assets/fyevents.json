@@ -336,8 +336,12 @@
             },
             {
                 "govdocs": {
-                    "en": [],
-                    "fr": []
+                    "en": [
+                        "https://www.canada.ca/en/treasury-board-secretariat/services/planned-government-spending/supplementary-estimates/supplementary-estimates-b-2025-26.html"
+                    ],
+                    "fr": [
+                        "https://www.canada.ca/fr/secretariat-conseil-tresor/services/depenses-prevues/budgets-supplementaires/budget-supplementaire-depenses-b-2025-2026.html"
+                    ]
                 },
                 "details": {
                     "id": "supplementary_estimates_b",
