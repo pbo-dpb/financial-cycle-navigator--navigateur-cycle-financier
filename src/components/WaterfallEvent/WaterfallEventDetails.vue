@@ -19,6 +19,26 @@ const props = defineProps({
   },
 });
 
+const isEconomicAndFiscalUpdate = computed(() => {
+  return props.event.fincy_document_type === "economic_and_fiscal_update";
+});
+
+const fincies = computed(() => {
+  console.log(store.fincies);
+
+  if (!store.fincies) return [];
+
+  if (isEconomicAndFiscalUpdate.value) {
+    return store.fincies.filter(
+      (fincy) => fincy.document_type === "economic_and_fiscal_update",
+    );
+  }
+
+  return store.fincies.filter(
+    (fincy) => fincy.document_type === props.event.fincy_document_type,
+  );
+});
+
 const description = computed(() => {
   return marked(props.event.getLongDescription(language.value));
 });
@@ -61,10 +81,10 @@ const description = computed(() => {
       </WaterfallEventDetailsGovdocs>
 
       <WaterfallEventDetailsFincy
-        :event="event"
-        v-if="event.fincy_document_type"
-      >
-      </WaterfallEventDetailsFincy>
+        v-for="fincy in fincies"
+        :key="fincy.id"
+        :fincy="fincy"
+      />
     </div>
   </div>
 </template>

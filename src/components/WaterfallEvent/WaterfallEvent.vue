@@ -28,7 +28,6 @@ const open = ref(false);
   >
     <summary
       class="cursor-pointer list-none grid-cols-3 gap-x-4 transition-colors duration-100 select-none hover:bg-sky-50 hover:group-open:bg-transparent lg:grid dark:hover:bg-sky-900 dark:group-open:hover:bg-transparent"
-      @click="open = !open"
     >
       <div class="flex flex-row gap-4 py-4">
         <div class="flex w-full flex-col gap-1 lg:text-right">

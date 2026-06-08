@@ -1,34 +1,22 @@
 <script setup>
 import { computed } from "vue";
-import Datasource from "../../stores/datasource.js";
-const store = Datasource();
-import pboGlyph from "../../assets/pbo-glyph.svg?url";
-
-import LoadingIndicator from "../LoadingIndicator.vue";
-import CycleEvent from "../../models/CycleEvent";
 import { marked } from "marked";
+
+import CycleEvent from "../../models/CycleEvent";
+import Datasource from "../../stores/datasource.js";
+import pboGlyph from "../../assets/pbo-glyph.svg?url";
+import LoadingIndicator from "../LoadingIndicator.vue";
+
+const store = Datasource();
 const language = computed(() => store.language);
 const strings = computed(() => store.strings);
-const fincies = computed(() => store.fincies);
-
-const fincy = computed(() => {
-  let fiscalYearStart =
-    new Date().getMonth() <= 2
-      ? new Date().getFullYear() - 1
-      : new Date().getFullYear();
-  return fincies.value.find(
-    (f) =>
-      f.document_type === props.event.fincy_document_type &&
-      f.fiscal_year_start == fiscalYearStart,
-  );
-});
 
 const fincyable = computed(() => {
-  if (!fincy.value) return null;
+  const fincy = props.fincy;
 
-  const fincyable = fincy.value.publication
-    ? fincy.value.publication
-    : fincy.value.blog;
+  if (!fincy) return null;
+
+  const fincyable = fincy.publication ? fincy.publication : fincy.blog;
 
   if (!fincyable) return null;
 
@@ -45,7 +33,7 @@ const fincyable = computed(() => {
 
   return {
     ...fincyable,
-    type: fincy.value.blog ? "BLOG" : fincy.value.publication.type,
+    type: fincy.blog ? "BLOG" : fincy.publication.type,
     release_date: new Date(fincyable.release_date),
     abstract: abstract ? marked(abstract) : null,
     permalink: fincyable.permalinks[language.value].website,
@@ -53,8 +41,8 @@ const fincyable = computed(() => {
 });
 
 const props = defineProps({
-  event: {
-    type: CycleEvent,
+  fincy: {
+    type: Object,
     required: true,
   },
 });
@@ -63,10 +51,11 @@ const openFincyable = (e) => {
   window.location.href = fincyable.value.permalink;
 };
 </script>
+
 <template>
   <div class="rounded-sm bg-teal-900 p-2">
     <LoadingIndicator
-      v-if="fincies === null"
+      v-if="!fincy"
       class="size-8 text-white"
     ></LoadingIndicator>
     <div v-else class="flex flex-col gap-2">
