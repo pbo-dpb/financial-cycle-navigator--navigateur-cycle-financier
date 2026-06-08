@@ -493,7 +493,14 @@
         }
       },
       {
-        "govdocs": {},
+        "govdocs": {
+          "en": [
+            "https://www.canada.ca/en/treasury-board-secretariat/services/planned-government-spending/supplementary-estimates/supplementary-estimates-a-2026-27.html"
+          ],
+          "fr": [
+            "https://www.canada.ca/fr/secretariat-conseil-tresor/services/depenses-prevues/budgets-supplementaires/budget-supplementaire-depenses-a-2026-2027.html"
+          ]
+        },
         "details": {
           "id": "supplementary_estimates_a",
           "name_en": "Supplementary Estimates (A)",
