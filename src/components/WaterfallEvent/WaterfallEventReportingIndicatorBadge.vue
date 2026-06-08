@@ -1,31 +1,37 @@
 <script setup>
+import { computed } from "vue";
+import { CheckIcon, ClockIcon } from "@heroicons/vue/24/outline";
 
-import { computed, } from 'vue'
-import { CheckIcon, ClockIcon } from '@heroicons/vue/24/outline';
+import govGlyph from "../../assets/gov-glyph.svg?url";
+import pboGlyph from "../../assets/pbo-glyph.svg?url";
 
-import govGlyph from "../../assets/gov-glyph.svg?url"
-import pboGlyph from "../../assets/pbo-glyph.svg?url"
-
-import Datasource from '../../stores/datasource.js'
-const store = Datasource()
-const strings = computed(() => store.strings)
+import Datasource from "../../stores/datasource.js";
+const store = Datasource();
+const strings = computed(() => store.strings);
 const props = defineProps({
-
-    type: {
-        type: String,
-        required: true
-    },
-    upcoming: {
-        type: Boolean,
-        default: false
-    }
+  type: {
+    type: String,
+    required: true,
+  },
+  upcoming: {
+    type: Boolean,
+    default: false,
+  },
 });
 </script>
 <template>
-    <div class="flex flex-row gap-0.5 items-center shrink-0 border border-solid border-teal-500 rounded-sm p-0.5 text-teal-600"
-        :data-tooltip="strings[`readyness_${type}_${upcoming ? 'upcoming' : 'released'}`]">
-        <img :src="type === 'gov' ? govGlyph : pboGlyph" class="size-4 shrink-0" alt="">
-        <ClockIcon v-if="upcoming" class="size-4 shrink-0"></ClockIcon>
-        <CheckIcon v-else class="size-4 shrink-0"></CheckIcon>
-    </div>
+  <div
+    class="flex shrink-0 flex-row items-center gap-0.5 rounded-sm border border-solid border-teal-500 p-0.5 text-teal-600"
+    :data-tooltip="
+      strings[`readyness_${type}_${upcoming ? 'upcoming' : 'released'}`]
+    "
+  >
+    <img
+      :src="type === 'gov' ? govGlyph : pboGlyph"
+      class="size-4 shrink-0"
+      alt=""
+    />
+    <ClockIcon v-if="upcoming" class="size-4 shrink-0"></ClockIcon>
+    <CheckIcon v-else class="size-4 shrink-0"></CheckIcon>
+  </div>
 </template>
