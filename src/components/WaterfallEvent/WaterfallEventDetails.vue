@@ -24,8 +24,6 @@ const isEconomicAndFiscalUpdate = computed(() => {
 });
 
 const fincies = computed(() => {
-  console.log(store.fincies);
-
   if (!store.fincies) return [];
 
   if (isEconomicAndFiscalUpdate.value) {
