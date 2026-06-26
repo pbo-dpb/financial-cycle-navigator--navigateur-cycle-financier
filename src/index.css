@@ -3,14 +3,14 @@
 @plugin "@tailwindcss/typography";
 
 @theme {
-  --grid-template-columns-13: repeat(13, minmax(0, 1fr));
+    --grid-template-columns-13: repeat(13, minmax(0, 1fr));
 
-  --grid-column-start-13: 13;
+    --grid-column-start-13: 13;
 
-  --grid-column-end-13: 13;
-  --grid-column-end-14: 14;
+    --grid-column-end-13: 13;
+    --grid-column-end-14: 14;
 
-  --grid-column-span-13: span 13 / span 13;
+    --grid-column-span-13: span 13 / span 13;
 }
 
 /*
@@ -22,13 +22,13 @@
   color utility to any element that depends on these defaults.
 */
 @layer base {
-  *,
-  ::after,
-  ::before,
-  ::backdrop,
-  ::file-selector-button {
-    border-color: var(--color-gray-200, currentcolor);
-  }
+    *,
+    ::after,
+    ::before,
+    ::backdrop,
+    ::file-selector-button {
+        border-color: var(--color-gray-200, currentcolor);
+    }
 }
 
 details>summary::marker,
@@ -36,7 +36,7 @@ details>summary::marker,
 details>summary::-webkit-details-marker
 
 /* Safari */ {
-  display: none;
+    display: none;
 }
 
 /**
@@ -47,63 +47,63 @@ details>summary::-webkit-details-marker
 
 /* Add this attribute to the element that needs a tooltip */
 [data-tooltip] {
-  position: relative;
-  z-index: 2;
-  cursor: pointer;
+    position: relative;
+    z-index: 2;
+    cursor: pointer;
 }
 
 /* Hide the tooltip content by default */
 [data-tooltip]:before,
 [data-tooltip]:after {
-  visibility: hidden;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-  filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=0);
-  opacity: 0;
-  pointer-events: none;
+    visibility: hidden;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=0);
+    opacity: 0;
+    pointer-events: none;
 }
 
 /* Position tooltip above the element */
 [data-tooltip]:before {
-  position: absolute;
-  bottom: 150%;
-  left: 50%;
-  margin-bottom: 5px;
-  margin-left: -80px;
-  padding: 7px;
-  width: 240px;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
-  background-color: #000;
-  background-color: hsla(0, 0%, 20%, 0.9);
-  color: #fff;
-  content: attr(data-tooltip);
-  text-align: center;
-  font-size: 14px;
-  line-height: 1.2;
+    position: absolute;
+    bottom: 150%;
+    left: 50%;
+    margin-bottom: 5px;
+    margin-left: -80px;
+    padding: 7px;
+    width: 240px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    background-color: #000;
+    background-color: hsla(0, 0%, 20%, 0.9);
+    color: #fff;
+    content: attr(data-tooltip);
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.2;
 }
 
 /* Triangle hack to make tooltip look like a speech bubble */
 [data-tooltip]:after {
-  position: absolute;
-  bottom: 150%;
-  left: 50%;
-  margin-left: -5px;
-  width: 0;
-  border-top: 5px solid #000;
-  border-top: 5px solid hsla(0, 0%, 20%, 0.9);
-  border-right: 5px solid transparent;
-  border-left: 5px solid transparent;
-  content: " ";
-  font-size: 0;
-  line-height: 0;
+    position: absolute;
+    bottom: 150%;
+    left: 50%;
+    margin-left: -5px;
+    width: 0;
+    border-top: 5px solid #000;
+    border-top: 5px solid hsla(0, 0%, 20%, 0.9);
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent;
+    content: " ";
+    font-size: 0;
+    line-height: 0;
 }
 
 /* Show tooltip content on hover */
 [data-tooltip]:hover:before,
 [data-tooltip]:hover:after {
-  visibility: visible;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
-  filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=100);
-  opacity: 1;
+    visibility: visible;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=100);
+    opacity: 1;
 }

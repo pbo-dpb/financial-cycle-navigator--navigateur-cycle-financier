@@ -1,15 +1,11 @@
 <script setup>
-import { computed } from "vue";
-import Datasource from "../../stores/datasource.js";
-const store = Datasource();
-import pboGlyph from "../../assets/pbo-glyph.svg?url";
+    import { computed } from "vue";
+    import { marked } from "marked";
 
-import LoadingIndicator from "../LoadingIndicator.vue";
-import CycleEvent from "../../models/CycleEvent";
-import { marked } from "marked";
-const language = computed(() => store.language);
-const strings = computed(() => store.strings);
-const fincies = computed(() => store.fincies);
+    import CycleEvent from "../../models/CycleEvent";
+    import Datasource from "../../stores/datasource.js";
+    import pboGlyph from "../../assets/pbo-glyph.svg?url";
+    import LoadingIndicator from "../LoadingIndicator.vue";
 
 const finciesByEvent = computed(() => {
   return fincies.value.filter(
@@ -48,12 +44,14 @@ const fincyables = computed(() => {
     .filter(Boolean);
 });
 
-const props = defineProps({
-  event: {
-    type: CycleEvent,
-    required: true,
-  },
-});
+        return {
+            ...fincyable,
+            type: fincy.blog ? "BLOG" : fincy.publication.type,
+            release_date: new Date(fincyable.release_date),
+            abstract: abstract ? marked(abstract) : null,
+            permalink: fincyable.permalinks[language.value].website,
+        };
+    });
 
 const openFincyable = (fincyable) => {
   window.location.href = fincyable.permalink;
@@ -130,7 +128,6 @@ const openFincyable = (fincyable) => {
             </div>
           </figure>
         </div>
-      </div>
     </div>
   </div>
   <div v-else class="italic">
