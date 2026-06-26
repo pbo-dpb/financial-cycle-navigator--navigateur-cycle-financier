@@ -118,7 +118,7 @@ const openFincyable = (fincyable) => {
                 :href="fincyable.permalink"
                 class="justify-start text-sm leading-tight font-semibold text-white underline md:flex-row md:items-center"
               >
-                {{ fincyable[`title_${language}`] }}</a
+                {{ fincyable[title_ + language] }}</a
               >
               <div
                 v-if="fincyable.abstract"
