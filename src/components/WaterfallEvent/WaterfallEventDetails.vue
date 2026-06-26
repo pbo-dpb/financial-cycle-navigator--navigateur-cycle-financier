@@ -84,10 +84,7 @@
                 v-if="event.govdocs">
             </WaterfallEventDetailsGovdocs>
 
-            <WaterfallEventDetailsFincy
-                v-for="fincy in fincies"
-                :key="fincy.id"
-                :fincy="fincy" />
+            <WaterfallEventDetailsFincy :event="event" />
         </div>
     </div>
 </template>

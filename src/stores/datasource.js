@@ -53,6 +53,7 @@ export default defineStore("datasource", {
             }
 
             this.fetchingFincies = true;
+
             const response = await fetch(
                 `https://rest-393962616e6b.pbo-dpb.ca/fincies/${this.currentFyStartYear}`,
             );
